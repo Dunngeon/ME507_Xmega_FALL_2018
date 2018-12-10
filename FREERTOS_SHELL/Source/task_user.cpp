@@ -39,6 +39,16 @@
 const portTickType ticks_to_delay = ((configTICK_RATE_HZ / 1000) * 5);
 
 
+// Test code for task_motor shares
+int16_t setpoint_l_1 = 5 * 77;		// Contains current X_INERT position of the goal (UNITS: ticks)
+int16_t setpoint_l_2 = 300;		// Contains current Y_INERT position of the goal (UNITS: ticks)
+//int16_t angle_1 = 0;			// Contains current angle of motor 1
+int16_t angle_2 = 0;			// Contains current angle of motor 2
+
+int16_t setpoint_a_2 = 0;		// Contains current angular setpoint of motor 2
+
+
+
 //-------------------------------------------------------------------------------------
 /** This constructor creates a new data acquisition task. Its main job is to call the
  *  parent class's constructor which does most of the work.

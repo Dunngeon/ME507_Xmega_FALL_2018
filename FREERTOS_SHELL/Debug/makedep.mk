@@ -4,13 +4,37 @@
 
 Source\lib\freertos\croutine.c
 
-Source\lib\serial\rs232int.cpp
+Source\motorDriver.cpp
+
+Source\qdec_driver.cpp
+
+Source\task_diag.cpp
 
 Source\task_LED.cpp
+
+Source\task_motor.cpp
+
+Source\task_Robot_State.cpp
 
 Source\task_user.cpp
 
 Source\xmega_util.cpp
+
+src\ASF\common\boards\user_board\init.c
+
+src\ASF\common\services\clock\xmega\sysclk.c
+
+src\ASF\common\services\sleepmgr\xmega\sleepmgr.c
+
+src\ASF\xmega\drivers\cpu\ccp.s
+
+src\ASF\xmega\drivers\nvm\nvm.c
+
+src\ASF\xmega\drivers\nvm\nvm_asm.s
+
+src\ASF\xmega\drivers\tc\tc.c
+
+src\ASF\xmega\services\pwm\pwm.c
 
 Source\lib\freertos\heap_2.c
 
@@ -97,6 +121,8 @@ Source\lib\serial\emstream_uint32_t.cpp
 Source\lib\serial\emstream_uint64_t.cpp
 
 Source\lib\serial\emstream_uint8_t.cpp
+
+Source\lib\serial\rs232int.cpp
 
 Source\main.cpp
 

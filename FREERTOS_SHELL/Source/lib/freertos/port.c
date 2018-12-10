@@ -73,6 +73,13 @@ Changes from V2.6.0
 	  WinAVR.
 */
 
+#ifndef _PORT_C_
+#define _PORT_C_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdlib.h>
 #include <avr/interrupt.h>
 
@@ -643,3 +650,9 @@ void RT_VECT (void)
 		vTaskIncrementTick ();
 	#endif
 }
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // _PORT_C

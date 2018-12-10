@@ -32,18 +32,15 @@
 #include "frt_shared_data.h"                // Header for thread-safe shared data
 #include "shares.h"                         // Global ('extern') queue declarations
 
-#include "xmega_util.h"					//commented out since CCPWrite is included in clksys_driver.h
+#include "xmega_util.h"
 
 #include "task_user.h"                      // Header for user interface task
-#include "task_LED.h"						// Header for user interface task
-
-
-
+#include "task_LED.h"                       // Header for user interface task
+#include "task_motor.h"                     // Header for motor task
+#include "task_Robot_State.h"               // Header for motor task
+#include "task_diag.h"						// Header for diagnostic task
 
 frt_text_queue print_ser_queue (32, NULL, 10);
-
-
-
 
 //=====================================================================================
 /** The main function sets up the RTOS.  Some test tasks are created. Then the 
@@ -55,13 +52,13 @@ frt_text_queue print_ser_queue (32, NULL, 10);
 int main (void)
 {
 	cli();
-	// Configure the system clock - see function for details on which clock is enabled
+	// Configure the system clock to use internal oscillator at 32 MHz
 	config_SYSCLOCK();
-
-	// Maps SYSCLOCK to output on PD7
-	PORTD.OUTCLR = PIN7_bm;				// Make sure the pin is off before configuring it as output
-	PORTD.DIRSET = PIN7_bm;				// configure PD7 as output
-	PORTCFG.CLKEVOUT = PORTCFG_CLKOUT_PD7_gc; //configure clock output on PD7 via event system.
+	
+	//check clock output
+	PORTD.OUTCLR = PIN7_bm;
+	PORTD.DIRSET = PIN7_bm;						//configure PD7 for output
+	PORTCFG.CLKEVOUT = PORTCFG_CLKOUT_PD7_gc; //configure clock to output on PD7
 	
 	// Disable the watchdog timer unless it's needed later. This is important because
 	// sometimes the watchdog timer may have been left on...and it tends to stay on	 
@@ -75,15 +72,22 @@ int main (void)
 	rs232 ser_dev(0,&USARTD0); // Create a serial device on USART E0
 	ser_dev << clrscr << "FreeRTOS Xmega Testing Program" << endl << endl;
 	
-	
-	// The user interface is at low priority; it could have been run in the idle task
+
+	/*// The user interface is at low priority; it could have been run in the idle task
 	// but it is desired to exercise the RTOS more thoroughly in this test program
-	new task_user ("UserInt", task_priority (0), 260, &ser_dev);
+	new task_user ("UserInt", task_priority (0), 260, &ser_dev);*/
 	
-	// The LED blinking task is also low priority and is used to test the timing accuracy
+	/*// The LED blinking task is also low priority and is used to test the timing accuracy
 	// of the task transitions.
-	new task_LED ("LED BLINKER", task_priority (1), 260, &ser_dev);
+	new task_LED ("LED BLINKER", task_priority (1), 260, &ser_dev);*/
+
+	// Motor Task. Stack size needs to be at least 260 to work.
+	new task_motor ("MOTOR TASK", task_priority (1), 1000, &ser_dev);
+
+	// Robot State task
+	new task_Robot_State ("RobotState", task_priority(3),1000, &ser_dev);
 	
+	//new task_diag("Diagnostic",task_priority(1),200, &ser_dev);
 	// Enable high - low level interrupts and enable global interrupts
 	PMIC_CTRL = (1 << PMIC_HILVLEN_bp | 1 << PMIC_MEDLVLEN_bp | 1 << PMIC_LOLVLEN_bp);
 	sei();
