@@ -1,7 +1,6 @@
 //**************************************************************************************
 /** \file task_Robot_State.h
- *    This file contains header stuff for a user interface task for a ME507/FreeRTOS
- *    test suite. 
+ *    This file contains header stuff for a 2wd robot with caster wheel encoder read/state estimator.
  *
  *  Revisions:
  *    \li 12-05-2018 RGD - Created task Robot State.

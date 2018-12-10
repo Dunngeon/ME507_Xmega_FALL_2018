@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+Source\BNO080_Xmega_Lib.cpp
+
 Source\lib\freertos\croutine.c
 
 Source\motorDriver.cpp
@@ -17,6 +19,8 @@ Source\task_motor.cpp
 Source\task_Robot_State.cpp
 
 Source\task_user.cpp
+
+Source\twi.c
 
 Source\xmega_util.cpp
 

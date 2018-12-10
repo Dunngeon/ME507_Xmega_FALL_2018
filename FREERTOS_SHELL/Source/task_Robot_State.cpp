@@ -1,10 +1,9 @@
 //**************************************************************************************
 /** \file task_Robot_State.cpp
- *    This file contains source code for a user interface task for a ME405/FreeRTOS
- *    test suite. 
+ *    This file contains header stuff for a 2wd robot with caster wheel encoder read/state estimator.
  *
  *  Revisions:
- *    \li fill this in with flowery shizzle later
+ *    \li 12-05-2018 RGD - Created task Robot State.
  *
  *  License:
  *    This file is copyright 2018 by RG Dunn and released under the Lesser GNU 
@@ -66,7 +65,7 @@ void task_Robot_State::run (void)
 
 	// Wait a little while for user interface task to finish up
 	delay_ms(10);
-	bool success = false;
+	bool success = false; //declare bool for checking success of function calls
 	//configure both quadrature counter elements
 	
 	while(1)
@@ -79,13 +78,15 @@ void task_Robot_State::run (void)
 			// ENC2 is right side of bot
 			
 			success = QDEC_Total_Setup(&PORTD, 4, false, 0, EVSYS_CHMUX_PORTD_PIN4_gc, false, EVSYS_QDIRM_00_gc, &TCD1, TC_EVSEL_CH0_gc, 0xFFFF); //setup M_ENC1 quad. encoder
-			*p_serial << "ENC1 Setup Success? " << success << endl;
+			//*p_serial << "ENC1 Setup Success? " << success << endl;
 			success = false;
 			success = QDEC_Total_Setup(&PORTE, 4, false, 2, EVSYS_CHMUX_PORTE_PIN4_gc, false, EVSYS_QDIRM_00_gc, &TCF0, TC_EVSEL_CH2_gc, 0xFFFF); //setup M_ENC2 quad. encoder
-			*p_serial << "ENC2 Setup Success? " << success << endl;
+			//*p_serial << "ENC2 Setup Success? " << success << endl;
 			M_Enc1_Val_Prev = QDEC_Read_TC(&TCD1); //read value of encoders for starting value
 			M_Enc2_Val_Prev = QDEC_Read_TC(&TCF0);
 			R_THETA_Delta = 0; //zero out the angular position of the robot upon startup.
+			R_I_POS_X = 0;
+			R_I_POS_Y = 0;
 			transition_to(1);
 			break;
 			

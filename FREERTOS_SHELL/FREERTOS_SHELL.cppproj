@@ -333,12 +333,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Source\encoderDriver.cpp">
+    <Compile Include="Source\BNO080_Xmega_Lib.cpp">
       <SubType>compile</SubType>
-    </None>
-    <None Include="Source\encoderDriver.h">
+    </Compile>
+    <Compile Include="Source\BNO080_Xmega_Lib.h">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <Compile Include="Source\lib\freertos\croutine.c">
       <SubType>compile</SubType>
     </Compile>
@@ -391,6 +391,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Source\task_user.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\twi.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Source\xmega_util.cpp">

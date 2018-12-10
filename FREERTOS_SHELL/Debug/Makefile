@@ -70,6 +70,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../Source/BNO080_Xmega_Lib.cpp \
 ../Source/lib/freertos/croutine.c \
 ../Source/motorDriver.cpp \
 ../Source/qdec_driver.cpp \
@@ -78,6 +79,7 @@ C_SRCS +=  \
 ../Source/task_motor.cpp \
 ../Source/task_Robot_State.cpp \
 ../Source/task_user.cpp \
+../Source/twi.c \
 ../Source/xmega_util.cpp \
 ../src/ASF/common/boards/user_board/init.c \
 ../src/ASF/common/services/clock/xmega/sysclk.c \
@@ -141,6 +143,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+Source/BNO080_Xmega_Lib.o \
 Source/lib/freertos/croutine.o \
 Source/motorDriver.o \
 Source/qdec_driver.o \
@@ -149,6 +152,7 @@ Source/task_LED.o \
 Source/task_motor.o \
 Source/task_Robot_State.o \
 Source/task_user.o \
+Source/twi.o \
 Source/xmega_util.o \
 src/ASF/common/boards/user_board/init.o \
 src/ASF/common/services/clock/xmega/sysclk.o \
@@ -205,6 +209,7 @@ Source/lib/serial/rs232int.o \
 Source/main.o
 
 OBJS_AS_ARGS +=  \
+Source/BNO080_Xmega_Lib.o \
 Source/lib/freertos/croutine.o \
 Source/motorDriver.o \
 Source/qdec_driver.o \
@@ -213,6 +218,7 @@ Source/task_LED.o \
 Source/task_motor.o \
 Source/task_Robot_State.o \
 Source/task_user.o \
+Source/twi.o \
 Source/xmega_util.o \
 src/ASF/common/boards/user_board/init.o \
 src/ASF/common/services/clock/xmega/sysclk.o \
@@ -269,6 +275,7 @@ Source/lib/serial/rs232int.o \
 Source/main.o
 
 C_DEPS +=  \
+Source/BNO080_Xmega_Lib.d \
 Source/lib/freertos/croutine.d \
 Source/motorDriver.d \
 Source/qdec_driver.d \
@@ -277,6 +284,7 @@ Source/task_LED.d \
 Source/task_motor.d \
 Source/task_Robot_State.d \
 Source/task_user.d \
+Source/twi.d \
 Source/xmega_util.d \
 src/ASF/common/boards/user_board/init.d \
 src/ASF/common/services/clock/xmega/sysclk.d \
@@ -333,6 +341,7 @@ Source/lib/serial/rs232int.d \
 Source/main.d
 
 C_DEPS_AS_ARGS +=  \
+Source/BNO080_Xmega_Lib.d \
 Source/lib/freertos/croutine.d \
 Source/motorDriver.d \
 Source/qdec_driver.d \
@@ -341,6 +350,7 @@ Source/task_LED.d \
 Source/task_motor.d \
 Source/task_Robot_State.d \
 Source/task_user.d \
+Source/twi.d \
 Source/xmega_util.d \
 src/ASF/common/boards/user_board/init.d \
 src/ASF/common/services/clock/xmega/sysclk.d \
@@ -410,6 +420,13 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+Source/BNO080_Xmega_Lib.o: ../Source/BNO080_Xmega_Lib.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=32000000UL -DBOARD=USER_BOARD  -I"../Source/lib/freertos" -I"../Source/lib/frtcpp" -I"../Source/lib/misc" -I"../Source/lib/serial" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\include" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/boards" -I"../src/ASF/xmega/utils/preprocessor" -I"../src/ASF/xmega/utils" -I"../src/ASF/common/utils" -I"../src" -I"../src/config" -I"../src/ASF/xmega/drivers/cpu" -I"../src/ASF/xmega/drivers/nvm" -I"../src/ASF/xmega/drivers/pmic" -I"../src/ASF/xmega/drivers/sleep" -I"../src/ASF/xmega/drivers/tc" -I"../src/ASF/xmega/services/pwm" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/sleepmgr"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega128a3u -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\gcc\dev\atxmega128a3u" -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 Source/lib/freertos/croutine.o: ../Source/lib/freertos/croutine.c
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
@@ -463,6 +480,13 @@ Source/task_user.o: ../Source/task_user.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=32000000UL -DBOARD=USER_BOARD  -I"../Source/lib/freertos" -I"../Source/lib/frtcpp" -I"../Source/lib/misc" -I"../Source/lib/serial" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\include" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/boards" -I"../src/ASF/xmega/utils/preprocessor" -I"../src/ASF/xmega/utils" -I"../src/ASF/common/utils" -I"../src" -I"../src/config" -I"../src/ASF/xmega/drivers/cpu" -I"../src/ASF/xmega/drivers/nvm" -I"../src/ASF/xmega/drivers/pmic" -I"../src/ASF/xmega/drivers/sleep" -I"../src/ASF/xmega/drivers/tc" -I"../src/ASF/xmega/services/pwm" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/sleepmgr"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega128a3u -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\gcc\dev\atxmega128a3u" -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Source/twi.o: ../Source/twi.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -DDEBUG -DF_CPU=32000000UL -DBOARD=USER_BOARD  -I"../Source/lib/freertos" -I"../Source/lib/frtcpp" -I"../Source/lib/misc" -I"../Source/lib/serial" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\include" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/boards" -I"../src/ASF/xmega/utils/preprocessor" -I"../src/ASF/xmega/utils" -I"../src/ASF/common/utils" -I"../src" -I"../src/config" -I"../src/ASF/xmega/drivers/cpu" -I"../src/ASF/xmega/drivers/nvm" -I"../src/ASF/xmega/drivers/pmic" -I"../src/ASF/xmega/drivers/sleep" -I"../src/ASF/xmega/drivers/tc" -I"../src/ASF/xmega/services/pwm" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/sleepmgr"  -O1 -fdata-sections -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g3 -Wall -mmcu=atxmega128a3u -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\gcc\dev\atxmega128a3u" -c -std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
