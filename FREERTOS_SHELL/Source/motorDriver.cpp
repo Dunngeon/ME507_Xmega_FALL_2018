@@ -313,9 +313,24 @@ void motorDriver::zero_esum_a(void)
  *  @param   en_i Enable integral action input.
  *  @param   en_d Enable derivative action input.
  *	@param	 op_type Whether operation is drive-coast or drive-brake
+ *	@var	 error_l Linear error term
+ *	@var	 error_a Angular error term
+ *	@var	 esum_l Linear cumulative error term
+ *	@var	 esum_a Angular cumulative error term
+ *	@var	 eder_l Linear error derivative term. Currently placeholder
+ *	@var	 eder_a Angular error derivative term. Currently placeholder
+ *	@var	 signal_l_p Proportional action term for linear action
+ *	@var	 signal_l_i Integral action term for linear action
+ *	@var	 signal_l_d Derivative action term for linear action
+ *	@var	 signal_a_p Proportional action term for angular action
+ *	@var	 signal_a_i Integral action term for angular action
+ *	@var	 signal_a_d Derivative action term for angular action
+ *	@var	 pwm_percent_linear Scaled PWM percentage due to linear control
+ *	@var	 pwm_percent_angular Scaled PWM percentage due to angular control
+ *	@var	 pwm_percent Total angular actuation. This is what is sent to the motor
+ *  @return  diag Struct of type diagnostic that holds motor's information to be passed to
+ *				task_diag when unpacked by task_motor
  */
-
-
 
 diagnostic motorDriver::run(bool en_p = 0, bool en_i = 0, bool en_d = 0, bool op_type = 0)
  {

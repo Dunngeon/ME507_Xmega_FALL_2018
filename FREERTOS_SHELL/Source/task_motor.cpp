@@ -3,7 +3,7 @@
  *    This file contains source code for a motor controller task.
  *
  *  Revisions:
- *    12-4-18 RT Original file
+ *    \li 12-4-18 RT Original file
  *
  *  License:
  *    This file is copyright 2018 by Ricky Tan and released under the Lesser GNU 
@@ -38,7 +38,8 @@ int16_t LinearDistance;			// Current linear distance
 int16_t setpoint_a_1 = 0;		// Contains current angular setpoint of Robot
 
 //-------------------------------------------------------------------------------------
-/** This constructor creates a new data acquisition task. Its main job is to call the
+/** @brief   Constructor for task_motor. Utilizes base task frt_task
+ *  @details This constructor creates a new motor task. Its main job is to call the
  *  parent class's constructor which does most of the work.
  *  @param a_name A character string which will be the name of this task
  *  @param a_priority The priority at which this task will initially run (default: 0)
@@ -62,8 +63,34 @@ task_motor::task_motor (const char* a_name,
 
 
 //-------------------------------------------------------------------------------------
-/** This task updates the motors with their current position and setpoints (intertask
-*	variables) and adjusts the output pwm signals.
+/** @brief   Run task for task_motor
+ *  @details This task initializes the motor objects and updates the motors with their 
+ *		current position and setpoints (intertask variables) and adjusts the output pwm signals.
+ *		It also updates shared task variables for task_diag for diagnostic use.
+*   @var motor1 Object of class motorDriver for first motor
+*   @var motor2 Object of class motorDriver for second motor
+*   @var pwm_scale Scaling factor for PWM output. Divides summed signals to allow for
+*			greater resolution.
+*   @var kp_l Linear proportional gain. Given to both motors
+*   @var ki_l Linear integral gain. Given to both motors
+*   @var kd_l Linear derivative gain. Given to both motors
+*   @var kp_a Angular proportional gain. Given to both motors
+*   @var ki_a Angular integral gain. Given to both motors
+*   @var kd_a Angular derivative gain. Given to both motors
+*   @var pwm_lim Limit for the total PWM output
+*   @var pwm_lim_linear Limit for the proportion of the total PWM signal allowed for
+*			the linear control loop. pwm_lim_linear - pwm_lin is the portion for angular
+*   @var esum_l_lim Limit for the accumulation of linear error terms
+*   @var esum_a_lim Limit for the accumulation of angular error terms
+*   @var diag_1 Object of struct diagnostic for motor 1 that catches the output of the motorDriver
+*			run method. Its values are passed to shared task variables used by task_diag
+*			to print diagnostic information
+*   @var diag_2 Same as diag_1 but for motor 2
+*   @var LinearDistance Shared task variable containing the linear target distance. Drives the
+*			linear control loop
+*   @var AngleGoal Shared task variable for target angle for robot
+*   @var Robot_Angle_Theta_INERT Shared task variable for current robot angle
+*   @var setpoint_a_1 Angular setpoint given to both motors. Development artefact
 */
 
 void task_motor::run (void)

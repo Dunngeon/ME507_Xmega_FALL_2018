@@ -45,9 +45,10 @@
 #include <math.h>							// Math Lib for calculating line length
 
 //-------------------------------------------------------------------------------------
-/** This task runs two motors in closed-loop control. It initializes the motor driver
-*	objects with proportional and integral gains then continually updates the pwm output
-*	of each motor by updating the motors' positiosn and setpoints, given to this task
+/** @brief   A motor controller task class.
+ *  @details This task runs two motors in closed-loop control. It initializes the motor driver
+*		objects with proportional and integral gains then continually updates the pwm output
+*		of each motor by updating the motors' positiosn and setpoints, given to this task
 *	by other tasks in the system.
  */
 
