@@ -1,0 +1,146 @@
+\hypertarget{twi_8h}{}\section{twi.\+h File Reference}
+\label{twi_8h}\index{twi.h@{twi.h}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for twi.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{twi_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{twi_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{twi_8h_ab98f3644c08b6503e2c39d743e94f6db}{T\+W\+I\+\_\+\+H\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{twi_8h_a82dd285d848c7aa4c9ee6ae8910c5e89}{T\+WI}}~T\+W\+IE
+\item 
+\#define \mbox{\hyperlink{twi_8h_aaaa85a78643d642f2c9e152b50fc6267}{T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+vect}}~T\+W\+I\+E\+\_\+\+T\+W\+I\+M\+\_\+vect
+\item 
+\#define \mbox{\hyperlink{twi_8h_ab712b0be661e78b1eed099040f0f36b7}{T\+W\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+vect}}~T\+W\+I\+E\+\_\+\+T\+W\+I\+S\+\_\+vect
+\item 
+\#define \mbox{\hyperlink{twi_8h_ab06a65dc25c5a2e91caf110691d213d3}{T\+W\+I\+\_\+\+B\+A\+U\+D\+\_\+\+R\+EG}}~155
+\item 
+\#define \mbox{\hyperlink{twi_8h_adb75d9afab5713aaddd071746be568e9}{T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+T\+L\+V\+L\+\_\+gc}}~T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+T\+L\+V\+L\+\_\+\+M\+E\+D\+\_\+gc
+\item 
+\#define \mbox{\hyperlink{twi_8h_a9d5bcc610685b3db4a64e7f446e843f3}{T\+W\+I\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{twi_8h_a71f87696dc8b5feed0ad493754190421}{T\+W\+I\+\_\+init}} (void)
+\item 
+bool \mbox{\hyperlink{twi_8h_aa1b68223940592621be1810601957fd6}{T\+W\+I\+\_\+write\+\_\+reg}} (uint8\+\_\+t address, uint8\+\_\+t reg, const uint8\+\_\+t $\ast$header, uint8\+\_\+t header\+\_\+size, const uint8\+\_\+t $\ast$buffer, uint8\+\_\+t buffer\+\_\+size)
+\item 
+bool \mbox{\hyperlink{twi_8h_a11ef0092a395c97e0809ac8d89e4c33f}{T\+W\+I\+\_\+read\+\_\+reg}} (uint8\+\_\+t address, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint8\+\_\+t buffer\+\_\+size)
+\item 
+bool \mbox{\hyperlink{twi_8h_a6f7c54b25b57b4699b15c0b9afffb077}{T\+W\+I\+\_\+read}} (uint8\+\_\+t address, uint8\+\_\+t $\ast$buffer, uint8\+\_\+t buffer\+\_\+size)
+\item 
+bool \mbox{\hyperlink{twi_8h_a8bcdaf5dcb2f225132a6133bb756a184}{T\+W\+I\+\_\+read\+\_\+double\+\_\+buff}} (uint8\+\_\+t address, uint8\+\_\+t $\ast$header\+\_\+buff, uint8\+\_\+t header\+\_\+size, uint8\+\_\+t $\ast$buffer, uint8\+\_\+t buffer\+\_\+size)
+\item 
+bool \mbox{\hyperlink{twi_8h_ae29c2a8ac0d61c7a252061c008af0c69}{T\+W\+I\+\_\+read\+\_\+clear}} (uint8\+\_\+t address, uint16\+\_\+t buffer\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains header info for I2C functions on an A\+Txmega
+
+Revisions\+: \begin{DoxyItemize}
+\item Created by unknown. \item 11-\/22-\/2018 Ryan G. Dunn -\/ Began testing with A\+Txmega128\+A3U \item 11-\/30-\/2018 R\+GD -\/ Added additional error register flags for writing, modified timeout on read to support B\+N\+O080s obtuse clock stretching. \item 12-\/01-\/2018 R\+GD -\/ Verified working with xmega 128A3U, added T\+W\+I\+\_\+read\+\_\+clear command \item 12-\/02-\/2018 R\+GD -\/ Added double buffer read function\end{DoxyItemize}
+License\+: This file is copyright 2018 by RG Dunn and released under the Lesser G\+NU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{twi_8h_a82dd285d848c7aa4c9ee6ae8910c5e89}\label{twi_8h_a82dd285d848c7aa4c9ee6ae8910c5e89}} 
+\index{twi.h@{twi.h}!TWI@{TWI}}
+\index{TWI@{TWI}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI}{TWI}}
+{\footnotesize\ttfamily \#define T\+WI~T\+W\+IE}
+
+\mbox{\Hypertarget{twi_8h_ab06a65dc25c5a2e91caf110691d213d3}\label{twi_8h_ab06a65dc25c5a2e91caf110691d213d3}} 
+\index{twi.h@{twi.h}!TWI\_BAUD\_REG@{TWI\_BAUD\_REG}}
+\index{TWI\_BAUD\_REG@{TWI\_BAUD\_REG}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_BAUD\_REG}{TWI\_BAUD\_REG}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+B\+A\+U\+D\+\_\+\+R\+EG~155}
+
+\mbox{\Hypertarget{twi_8h_ab98f3644c08b6503e2c39d743e94f6db}\label{twi_8h_ab98f3644c08b6503e2c39d743e94f6db}} 
+\index{twi.h@{twi.h}!TWI\_H\_@{TWI\_H\_}}
+\index{TWI\_H\_@{TWI\_H\_}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_H\_}{TWI\_H\_}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+H\+\_\+}
+
+\mbox{\Hypertarget{twi_8h_a9d5bcc610685b3db4a64e7f446e843f3}\label{twi_8h_a9d5bcc610685b3db4a64e7f446e843f3}} 
+\index{twi.h@{twi.h}!TWI\_IDLE\_TIMEOUT\_MS@{TWI\_IDLE\_TIMEOUT\_MS}}
+\index{TWI\_IDLE\_TIMEOUT\_MS@{TWI\_IDLE\_TIMEOUT\_MS}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_IDLE\_TIMEOUT\_MS}{TWI\_IDLE\_TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS~10}
+
+\mbox{\Hypertarget{twi_8h_adb75d9afab5713aaddd071746be568e9}\label{twi_8h_adb75d9afab5713aaddd071746be568e9}} 
+\index{twi.h@{twi.h}!TWI\_MASTER\_INTLVL\_gc@{TWI\_MASTER\_INTLVL\_gc}}
+\index{TWI\_MASTER\_INTLVL\_gc@{TWI\_MASTER\_INTLVL\_gc}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_MASTER\_INTLVL\_gc}{TWI\_MASTER\_INTLVL\_gc}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+T\+L\+V\+L\+\_\+gc~T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+T\+L\+V\+L\+\_\+\+M\+E\+D\+\_\+gc}
+
+\mbox{\Hypertarget{twi_8h_aaaa85a78643d642f2c9e152b50fc6267}\label{twi_8h_aaaa85a78643d642f2c9e152b50fc6267}} 
+\index{twi.h@{twi.h}!TWI\_MASTER\_vect@{TWI\_MASTER\_vect}}
+\index{TWI\_MASTER\_vect@{TWI\_MASTER\_vect}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_MASTER\_vect}{TWI\_MASTER\_vect}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+vect~T\+W\+I\+E\+\_\+\+T\+W\+I\+M\+\_\+vect}
+
+\mbox{\Hypertarget{twi_8h_ab712b0be661e78b1eed099040f0f36b7}\label{twi_8h_ab712b0be661e78b1eed099040f0f36b7}} 
+\index{twi.h@{twi.h}!TWI\_SLAVE\_vect@{TWI\_SLAVE\_vect}}
+\index{TWI\_SLAVE\_vect@{TWI\_SLAVE\_vect}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_SLAVE\_vect}{TWI\_SLAVE\_vect}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+vect~T\+W\+I\+E\+\_\+\+T\+W\+I\+S\+\_\+vect}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{twi_8h_a71f87696dc8b5feed0ad493754190421}\label{twi_8h_a71f87696dc8b5feed0ad493754190421}} 
+\index{twi.h@{twi.h}!TWI\_init@{TWI\_init}}
+\index{TWI\_init@{TWI\_init}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_init()}{TWI\_init()}}
+{\footnotesize\ttfamily void T\+W\+I\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a6f7c54b25b57b4699b15c0b9afffb077}\label{twi_8h_a6f7c54b25b57b4699b15c0b9afffb077}} 
+\index{twi.h@{twi.h}!TWI\_read@{TWI\_read}}
+\index{TWI\_read@{TWI\_read}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_read()}{TWI\_read()}}
+{\footnotesize\ttfamily bool T\+W\+I\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_ae29c2a8ac0d61c7a252061c008af0c69}\label{twi_8h_ae29c2a8ac0d61c7a252061c008af0c69}} 
+\index{twi.h@{twi.h}!TWI\_read\_clear@{TWI\_read\_clear}}
+\index{TWI\_read\_clear@{TWI\_read\_clear}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_read\_clear()}{TWI\_read\_clear()}}
+{\footnotesize\ttfamily bool T\+W\+I\+\_\+read\+\_\+clear (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint16\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a8bcdaf5dcb2f225132a6133bb756a184}\label{twi_8h_a8bcdaf5dcb2f225132a6133bb756a184}} 
+\index{twi.h@{twi.h}!TWI\_read\_double\_buff@{TWI\_read\_double\_buff}}
+\index{TWI\_read\_double\_buff@{TWI\_read\_double\_buff}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_read\_double\_buff()}{TWI\_read\_double\_buff()}}
+{\footnotesize\ttfamily bool T\+W\+I\+\_\+read\+\_\+double\+\_\+buff (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t $\ast$}]{header\+\_\+buff,  }\item[{uint8\+\_\+t}]{header\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a11ef0092a395c97e0809ac8d89e4c33f}\label{twi_8h_a11ef0092a395c97e0809ac8d89e4c33f}} 
+\index{twi.h@{twi.h}!TWI\_read\_reg@{TWI\_read\_reg}}
+\index{TWI\_read\_reg@{TWI\_read\_reg}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_read\_reg()}{TWI\_read\_reg()}}
+{\footnotesize\ttfamily bool T\+W\+I\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_aa1b68223940592621be1810601957fd6}\label{twi_8h_aa1b68223940592621be1810601957fd6}} 
+\index{twi.h@{twi.h}!TWI\_write\_reg@{TWI\_write\_reg}}
+\index{TWI\_write\_reg@{TWI\_write\_reg}!twi.h@{twi.h}}
+\subsubsection{\texorpdfstring{TWI\_write\_reg()}{TWI\_write\_reg()}}
+{\footnotesize\ttfamily bool T\+W\+I\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{reg,  }\item[{const uint8\+\_\+t $\ast$}]{header,  }\item[{uint8\+\_\+t}]{header\+\_\+size,  }\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+

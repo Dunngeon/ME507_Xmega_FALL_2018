@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['sensor_5freportid_5faccelerometer',['SENSOR_REPORTID_ACCELEROMETER',['../BNO080__Xmega__Lib_8h.html#a09b4744152d1b660fd4890d7e6bf0441',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fgame_5frotation_5fvector',['SENSOR_REPORTID_GAME_ROTATION_VECTOR',['../BNO080__Xmega__Lib_8h.html#a380de286d28fdffc46c0e46fb7c38e1c',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fgeomagnetic_5frotation_5fvector',['SENSOR_REPORTID_GEOMAGNETIC_ROTATION_VECTOR',['../BNO080__Xmega__Lib_8h.html#adc1f0507cfa1f9e4af977214469a0c8c',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fgravity',['SENSOR_REPORTID_GRAVITY',['../BNO080__Xmega__Lib_8h.html#a792333e8edabd5a2e0226e591f26c866',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fgyroscope',['SENSOR_REPORTID_GYROSCOPE',['../BNO080__Xmega__Lib_8h.html#a50ce10b6e19566d6392d233a3bd65e65',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5flinear_5facceleration',['SENSOR_REPORTID_LINEAR_ACCELERATION',['../BNO080__Xmega__Lib_8h.html#a4f14c584ded02a79614ff9147a047c92',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fmagnetic_5ffield',['SENSOR_REPORTID_MAGNETIC_FIELD',['../BNO080__Xmega__Lib_8h.html#a56280e66ead058e104abba5cc8ec833d',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fpersonal_5factivity_5fclassifier',['SENSOR_REPORTID_PERSONAL_ACTIVITY_CLASSIFIER',['../BNO080__Xmega__Lib_8h.html#aded67cfe6df6776e6421e32237502ec1',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5frotation_5fvector',['SENSOR_REPORTID_ROTATION_VECTOR',['../BNO080__Xmega__Lib_8h.html#a9e0bbd70afccd248e490afeb75acce84',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fstability_5fclassifier',['SENSOR_REPORTID_STABILITY_CLASSIFIER',['../BNO080__Xmega__Lib_8h.html#adb6bc6abf76110d5cbcc66d22e6a1b95',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5fstep_5fcounter',['SENSOR_REPORTID_STEP_COUNTER',['../BNO080__Xmega__Lib_8h.html#abf209ac6e007b2abf9ef417109ff6345',1,'BNO080_Xmega_Lib.h']]],
+  ['sensor_5freportid_5ftap_5fdetector',['SENSOR_REPORTID_TAP_DETECTOR',['../BNO080__Xmega__Lib_8h.html#a8487c1e8abdd04acc638eefc1529f73b',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5fheader_5fsize',['SHTP_HEADER_SIZE',['../BNO080__Xmega__Lib_8h.html#aa80b64798e7ac4c96fe314006a5b99e9',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fbase_5ftimestamp',['SHTP_REPORT_BASE_TIMESTAMP',['../BNO080__Xmega__Lib_8h.html#a5a4c96c04cc37f684a86bfd8a13b28b2',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fcommand_5frequest',['SHTP_REPORT_COMMAND_REQUEST',['../BNO080__Xmega__Lib_8h.html#a712010ee4857ccba8ee5ed9205b6ae20',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fcommand_5fresponse',['SHTP_REPORT_COMMAND_RESPONSE',['../BNO080__Xmega__Lib_8h.html#a83dafc26b6e579e8018a2c16937857ab',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5ffrs_5fread_5frequest',['SHTP_REPORT_FRS_READ_REQUEST',['../BNO080__Xmega__Lib_8h.html#ab985095047ff984572bb7178104c7b58',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5ffrs_5fread_5fresponse',['SHTP_REPORT_FRS_READ_RESPONSE',['../BNO080__Xmega__Lib_8h.html#a83ce806fd455b8144a141cde9517c9cc',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fproduct_5fid_5frequest',['SHTP_REPORT_PRODUCT_ID_REQUEST',['../BNO080__Xmega__Lib_8h.html#a6d7a876cde7121e3ae0eb00cfab250b2',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fproduct_5fid_5fresponse',['SHTP_REPORT_PRODUCT_ID_RESPONSE',['../BNO080__Xmega__Lib_8h.html#a7dc2542911610758df8edc4e54b7e440',1,'BNO080_Xmega_Lib.h']]],
+  ['shtp_5freport_5fset_5ffeature_5fcommand',['SHTP_REPORT_SET_FEATURE_COMMAND',['../BNO080__Xmega__Lib_8h.html#a8e7664b3054c74b2df9531eee21266fb',1,'BNO080_Xmega_Lib.h']]]
+];

@@ -1,0 +1,73 @@
+\hypertarget{classtask__diag}{}\section{task\+\_\+diag Class Reference}
+\label{classtask__diag}\index{task\_diag@{task\_diag}}
+
+
+{\ttfamily \#include $<$task\+\_\+diag.\+h$>$}
+
+
+
+Inheritance diagram for task\+\_\+diag\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classtask__diag__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for task\+\_\+diag\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classtask__diag__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__diag_ab6168448b8f36d11daac6b45b3c8b095}{task\+\_\+diag}} (const char $\ast$, unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE, size\+\_\+t, emstream $\ast$)
+\item 
+void \mbox{\hyperlink{classtask__diag_a072201c00e01a8ed06b8e6a5effffd10}{run}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This task periodically prints out diagnostic information for the system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__diag_ab6168448b8f36d11daac6b45b3c8b095}\label{classtask__diag_ab6168448b8f36d11daac6b45b3c8b095}} 
+\index{task\_diag@{task\_diag}!task\_diag@{task\_diag}}
+\index{task\_diag@{task\_diag}!task\_diag@{task\_diag}}
+\subsubsection{\texorpdfstring{task\_diag()}{task\_diag()}}
+{\footnotesize\ttfamily task\+\_\+diag\+::task\+\_\+diag (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+\_\+name,  }\item[{unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE}]{a\+\_\+priority,  }\item[{size\+\_\+t}]{a\+\_\+stack\+\_\+size,  }\item[{emstream $\ast$}]{p\+\_\+ser\+\_\+dev }\end{DoxyParamCaption})}
+
+This constructor creates a new data acquisition task. Its main job is to call the parent class\textquotesingle{}s constructor which does most of the work. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+name} & A character string which will be the name of this task \\
+\hline
+{\em a\+\_\+priority} & The priority at which this task will initially run (default\+: 0) \\
+\hline
+{\em a\+\_\+stack\+\_\+size} & The size of this task\textquotesingle{}s stack in bytes (default\+: config\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE) \\
+\hline
+{\em p\+\_\+ser\+\_\+dev} & Pointer to a serial device (port, radio, SD card, etc.) which can be used by this task to communicate (default\+: N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__diag_a072201c00e01a8ed06b8e6a5effffd10}\label{classtask__diag_a072201c00e01a8ed06b8e6a5effffd10}} 
+\index{task\_diag@{task\_diag}!run@{run}}
+\index{run@{run}!task\_diag@{task\_diag}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void task\+\_\+diag\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method is called by the R\+T\+OS once to run the task loop for ever and ever.
+
+This task pulls information from shared variables and prints to serial. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{task__diag_8h}{task\+\_\+diag.\+h}}\item 
+\mbox{\hyperlink{task__diag_8cpp}{task\+\_\+diag.\+cpp}}\end{DoxyCompactItemize}

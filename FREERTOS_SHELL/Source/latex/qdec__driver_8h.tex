@@ -1,0 +1,313 @@
+\hypertarget{qdec__driver_8h}{}\section{qdec\+\_\+driver.\+h File Reference}
+\label{qdec__driver_8h}\index{qdec\_driver.h@{qdec\_driver.h}}
+
+
+The X\+M\+E\+GA Quadrature Decoder driver header file.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for qdec\+\_\+driver.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{qdec__driver_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{qdec__driver_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{qdec__driver_8h_a534135e020f7da5c8ced6efd50e75dd7}{C\+W\+\_\+\+D\+IR}}~0 /$\ast$ Clockwise direction. $\ast$/
+\item 
+\#define \mbox{\hyperlink{qdec__driver_8h_ac21eaff85d38d6ada3dc0a72f6b847dc}{C\+C\+W\+\_\+\+D\+IR}}~1 /$\ast$ Counter Clockwise direction. $\ast$/
+\item 
+\#define \mbox{\hyperlink{qdec__driver_8h_a586a03cad9c2f63324a433877fe97dae}{Get\+Capture\+Value}}(\+\_\+tc)~( \+\_\+tc.\+C\+CA )
+\begin{DoxyCompactList}\small\item\em This macro return the value of the capture register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{qdec__driver_8h_ab5758ec07ba6286d6813db94cf793377}{Q\+D\+E\+C\+\_\+\+Total\+\_\+\+Setup}} (P\+O\+R\+T\+\_\+t $\ast$q\+Port, uint8\+\_\+t q\+Pin, bool inv\+IO, uint8\+\_\+t q\+Ev\+Mux, E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t q\+Pin\+Input, bool use\+Index, E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t q\+Index\+State, T\+C0\+\_\+t $\ast$q\+Timer, T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t q\+Event\+Channel, uint16\+\_\+t line\+Count)
+\begin{DoxyCompactList}\small\item\em Wrapperfunction to set up all parameters for the quadrature decoder. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{qdec__driver_8h_a99df634f8f0c486149db7440524c343f}{Q\+D\+E\+C\+\_\+\+Total\+\_\+\+Setup}} (P\+O\+R\+T\+\_\+t $\ast$q\+Port, uint8\+\_\+t q\+Pin, bool inv\+IO, uint8\+\_\+t q\+Ev\+Mux, E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t q\+Pin\+Input, bool use\+Index, E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t q\+Index\+State, T\+C1\+\_\+t $\ast$q\+Timer, T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t q\+Event\+Channel, uint16\+\_\+t line\+Count)
+\item 
+bool \mbox{\hyperlink{qdec__driver_8h_a332418d6f5dcf52455d2454fba2f42b9}{Q\+D\+E\+C\+\_\+\+Port\+\_\+\+Setup}} (P\+O\+R\+T\+\_\+t $\ast$q\+Port, uint8\+\_\+t q\+Pin, bool use\+Index, bool inv\+IO)
+\begin{DoxyCompactList}\small\item\em This function set up the needed configuration for the port used for the quadrature decoding. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{qdec__driver_8h_a63f330178c4e54f642a84a249ea72785}{Q\+D\+E\+C\+\_\+\+E\+V\+S\+Y\+S\+\_\+\+Setup}} (uint8\+\_\+t q\+Ev\+Mux, E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t q\+Pin\+Input, bool use\+Index, E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t q\+Index\+State)
+\begin{DoxyCompactList}\small\item\em This function configure the event system for quadrature decoding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qdec__driver_8h_a08ebbd4e38434c23be2aa53ac7f6712e}{Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Dec\+\_\+\+Setup}} (T\+C0\+\_\+t $\ast$q\+Timer, T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t q\+Event\+Channel, uint16\+\_\+t countersize)
+\begin{DoxyCompactList}\small\item\em This function set up the needed configuration for the Timer/\+Counter to handle the quadrature decoding from the event system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qdec__driver_8h_a6ba42bb45c85cfce2ef7039dd26b17f3}{Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Dec\+\_\+\+Setup}} (T\+C1\+\_\+t $\ast$q\+Timer, T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t q\+Event\+Channel, uint16\+\_\+t countersize)
+\item 
+void \mbox{\hyperlink{qdec__driver_8h_a81a14baaa57e91e95ba68f1203d744aa}{Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Freq\+\_\+\+Setup}} (T\+C0\+\_\+t $\ast$q\+Timer, T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t q\+Event\+Channel, E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t q\+Pin\+Input, T\+C\+\_\+\+C\+L\+K\+S\+E\+L\+\_\+t clksel)
+\begin{DoxyCompactList}\small\item\em This function set up the needed configuration for a Timer/\+Counter to handle the frequency/speed measurement from the event system. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{qdec__driver_8h_ae7096b073aafa69156c17ba7003e1834}{Q\+D\+E\+C\+\_\+\+Get\+\_\+\+Direction}} (T\+C0\+\_\+t $\ast$q\+Timer)
+\begin{DoxyCompactList}\small\item\em This function return the direction of the counter/\+Q\+D\+EC. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{qdec__driver_8h_aefc345aa56ddba2a9dae4cabbeb9d2e9}{Q\+D\+E\+C\+\_\+\+Read\+\_\+\+TC}} (T\+C0\+\_\+t $\ast$q\+Timer)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{qdec__driver_8h_af89af95ce53ed09abc67548b91a74413}{Q\+D\+E\+C\+\_\+\+Read\+\_\+\+TC}} (T\+C1\+\_\+t $\ast$q\+Timer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The X\+M\+E\+GA Quadrature Decoder driver header file. 
+
+\begin{DoxyVerb} This file contains the function prototypes and enumerator definitions
+ for various configuration parameters for the XMEGA Quadrature Decoder.
+
+ The driver is not intended for size and/or speed critical code. The
+ driver is intended for rapid prototyping and documentation purposes for
+ getting started with the XMEGA Quadrature Decoder.
+
+ For size and/or speed critical code, it is recommended to copy the
+ function contents directly into your application instead of making
+ a function call.
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Application note\+:}
+A\+V\+R1600\+: Using the X\+M\+E\+GA Quadrature Decoder
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Documentation}
+For comprehensive code documentation, supported compilers, compiler settings and supported devices see readme.\+html
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Atmel Corporation, now Microchip Technology Inc.\+: \href{http://www.microchip.com}{\texttt{ http\+://www.\+microchip.\+com}} ~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+7623 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Date}
+2017-\/09-\/06 1402 +0200 (on, 06 sep 2017) 
+\end{DoxyParagraph}
+
+
+Copyright (c) 2008, Atmel Corporation All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item The name of A\+T\+M\+EL may not be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY A\+T\+M\+EL \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE E\+X\+P\+R\+E\+S\+S\+LY A\+ND S\+P\+E\+C\+I\+F\+I\+C\+A\+L\+LY D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL A\+T\+M\+EL BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{qdec__driver_8h_ac21eaff85d38d6ada3dc0a72f6b847dc}\label{qdec__driver_8h_ac21eaff85d38d6ada3dc0a72f6b847dc}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!CCW\_DIR@{CCW\_DIR}}
+\index{CCW\_DIR@{CCW\_DIR}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{CCW\_DIR}{CCW\_DIR}}
+{\footnotesize\ttfamily \#define C\+C\+W\+\_\+\+D\+IR~1 /$\ast$ Counter Clockwise direction. $\ast$/}
+
+\mbox{\Hypertarget{qdec__driver_8h_a534135e020f7da5c8ced6efd50e75dd7}\label{qdec__driver_8h_a534135e020f7da5c8ced6efd50e75dd7}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!CW\_DIR@{CW\_DIR}}
+\index{CW\_DIR@{CW\_DIR}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{CW\_DIR}{CW\_DIR}}
+{\footnotesize\ttfamily \#define C\+W\+\_\+\+D\+IR~0 /$\ast$ Clockwise direction. $\ast$/}
+
+\mbox{\Hypertarget{qdec__driver_8h_a586a03cad9c2f63324a433877fe97dae}\label{qdec__driver_8h_a586a03cad9c2f63324a433877fe97dae}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!GetCaptureValue@{GetCaptureValue}}
+\index{GetCaptureValue@{GetCaptureValue}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{GetCaptureValue}{GetCaptureValue}}
+{\footnotesize\ttfamily \#define Get\+Capture\+Value(\begin{DoxyParamCaption}\item[{}]{\+\_\+tc }\end{DoxyParamCaption})~( \+\_\+tc.\+C\+CA )}
+
+
+
+This macro return the value of the capture register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{qdec__driver_8h_a63f330178c4e54f642a84a249ea72785}\label{qdec__driver_8h_a63f330178c4e54f642a84a249ea72785}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_EVSYS\_Setup@{QDEC\_EVSYS\_Setup}}
+\index{QDEC\_EVSYS\_Setup@{QDEC\_EVSYS\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_EVSYS\_Setup()}{QDEC\_EVSYS\_Setup()}}
+{\footnotesize\ttfamily bool Q\+D\+E\+C\+\_\+\+E\+V\+S\+Y\+S\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{q\+Ev\+Mux,  }\item[{E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t}]{q\+Pin\+Input,  }\item[{bool}]{use\+Index,  }\item[{E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t}]{q\+Index\+State }\end{DoxyParamCaption})}
+
+
+
+This function configure the event system for quadrature decoding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Ev\+Mux} & Which event channel to use. Only 0, 2 and 4 is available. \\
+\hline
+{\em q\+Pin\+Input} & The pin input of Q\+D\+P\+H0 to the E\+V\+S\+Y\+S.\+C\+H\+M\+UX . \\
+\hline
+{\em use\+Index} & True if an optional Index pin is used. \\
+\hline
+{\em q\+Index\+State} & In which state the index signal will trigger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if setup was ok, false if any errors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{qdec__driver_8h_ae7096b073aafa69156c17ba7003e1834}\label{qdec__driver_8h_ae7096b073aafa69156c17ba7003e1834}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Get\_Direction@{QDEC\_Get\_Direction}}
+\index{QDEC\_Get\_Direction@{QDEC\_Get\_Direction}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Get\_Direction()}{QDEC\_Get\_Direction()}}
+{\footnotesize\ttfamily uint8\+\_\+t Q\+D\+E\+C\+\_\+\+Get\+\_\+\+Direction (\begin{DoxyParamCaption}\item[{T\+C0\+\_\+t $\ast$}]{q\+Timer }\end{DoxyParamCaption})}
+
+
+
+This function return the direction of the counter/\+Q\+D\+EC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Timer} & The timer used for Q\+D\+EC.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em C\+W\+\_\+\+D\+IR} & if clockwise/up counting, \\
+\hline
+{\em C\+C\+W\+\_\+\+D\+IR} & if counter clockwise/down counting. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{qdec__driver_8h_a332418d6f5dcf52455d2454fba2f42b9}\label{qdec__driver_8h_a332418d6f5dcf52455d2454fba2f42b9}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Port\_Setup@{QDEC\_Port\_Setup}}
+\index{QDEC\_Port\_Setup@{QDEC\_Port\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Port\_Setup()}{QDEC\_Port\_Setup()}}
+{\footnotesize\ttfamily bool Q\+D\+E\+C\+\_\+\+Port\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{P\+O\+R\+T\+\_\+t $\ast$}]{q\+Port,  }\item[{uint8\+\_\+t}]{q\+Pin,  }\item[{bool}]{use\+Index,  }\item[{bool}]{inv\+IO }\end{DoxyParamCaption})}
+
+
+
+This function set up the needed configuration for the port used for the quadrature decoding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Port} & The port to use. \\
+\hline
+{\em q\+Pin} & The first input pin (Q\+D\+P\+H0) to use (0 -\/ 5/6). \\
+\hline
+{\em use\+Index} & True if an optional Index pin is used. \\
+\hline
+{\em inv\+IO} & True if IO pins should be inverted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if setup was ok, false if any errors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{qdec__driver_8h_aefc345aa56ddba2a9dae4cabbeb9d2e9}\label{qdec__driver_8h_aefc345aa56ddba2a9dae4cabbeb9d2e9}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Read\_TC@{QDEC\_Read\_TC}}
+\index{QDEC\_Read\_TC@{QDEC\_Read\_TC}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Read\_TC()}{QDEC\_Read\_TC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint16\+\_\+t Q\+D\+E\+C\+\_\+\+Read\+\_\+\+TC (\begin{DoxyParamCaption}\item[{T\+C0\+\_\+t $\ast$}]{q\+Timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{qdec__driver_8h_af89af95ce53ed09abc67548b91a74413}\label{qdec__driver_8h_af89af95ce53ed09abc67548b91a74413}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Read\_TC@{QDEC\_Read\_TC}}
+\index{QDEC\_Read\_TC@{QDEC\_Read\_TC}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Read\_TC()}{QDEC\_Read\_TC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint16\+\_\+t Q\+D\+E\+C\+\_\+\+Read\+\_\+\+TC (\begin{DoxyParamCaption}\item[{T\+C1\+\_\+t $\ast$}]{q\+Timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{qdec__driver_8h_a08ebbd4e38434c23be2aa53ac7f6712e}\label{qdec__driver_8h_a08ebbd4e38434c23be2aa53ac7f6712e}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_TC\_Dec\_Setup@{QDEC\_TC\_Dec\_Setup}}
+\index{QDEC\_TC\_Dec\_Setup@{QDEC\_TC\_Dec\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_TC\_Dec\_Setup()}{QDEC\_TC\_Dec\_Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Dec\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{T\+C0\+\_\+t $\ast$}]{q\+Timer,  }\item[{T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t}]{q\+Event\+Channel,  }\item[{uint16\+\_\+t}]{countersize }\end{DoxyParamCaption})}
+
+
+
+This function set up the needed configuration for the Timer/\+Counter to handle the quadrature decoding from the event system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Timer} & The timer to use for Q\+D\+EC. \\
+\hline
+{\em q\+Event\+Channel} & The event channel to listen to. \\
+\hline
+{\em line\+Count} & The number of lines in the quadrature encoder. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{qdec__driver_8h_a6ba42bb45c85cfce2ef7039dd26b17f3}\label{qdec__driver_8h_a6ba42bb45c85cfce2ef7039dd26b17f3}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_TC\_Dec\_Setup@{QDEC\_TC\_Dec\_Setup}}
+\index{QDEC\_TC\_Dec\_Setup@{QDEC\_TC\_Dec\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_TC\_Dec\_Setup()}{QDEC\_TC\_Dec\_Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Dec\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{T\+C1\+\_\+t $\ast$}]{q\+Timer,  }\item[{T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t}]{q\+Event\+Channel,  }\item[{uint16\+\_\+t}]{countersize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{qdec__driver_8h_a81a14baaa57e91e95ba68f1203d744aa}\label{qdec__driver_8h_a81a14baaa57e91e95ba68f1203d744aa}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_TC\_Freq\_Setup@{QDEC\_TC\_Freq\_Setup}}
+\index{QDEC\_TC\_Freq\_Setup@{QDEC\_TC\_Freq\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_TC\_Freq\_Setup()}{QDEC\_TC\_Freq\_Setup()}}
+{\footnotesize\ttfamily void Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Freq\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{T\+C0\+\_\+t $\ast$}]{q\+Timer,  }\item[{T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t}]{q\+Event\+Channel,  }\item[{E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t}]{q\+Pin\+Input,  }\item[{T\+C\+\_\+\+C\+L\+K\+S\+E\+L\+\_\+t}]{clksel }\end{DoxyParamCaption})}
+
+
+
+This function set up the needed configuration for a Timer/\+Counter to handle the frequency/speed measurement from the event system. 
+
+\begin{DoxyNote}{Note}
+The real frequency of rotation can be calculated from the capture register by using the folowing function. F\+R\+EQ = ( F\+\_\+\+C\+PU / clk\+\_\+div ) / ( C\+A\+P\+T\+U\+RE $\ast$ line\+Count )
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Timer} & The timer to use for Q\+D\+EC. \\
+\hline
+{\em q\+Event\+Channel} & The event channel to listen to. \\
+\hline
+{\em q\+Pin\+Input} & The pin input of Q\+D\+P\+H0 to the E\+V\+S\+Y\+S.\+C\+H\+M\+UX. \\
+\hline
+{\em clksel} & The clk div to use for timer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{qdec__driver_8h_ab5758ec07ba6286d6813db94cf793377}\label{qdec__driver_8h_ab5758ec07ba6286d6813db94cf793377}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Total\_Setup@{QDEC\_Total\_Setup}}
+\index{QDEC\_Total\_Setup@{QDEC\_Total\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Total\_Setup()}{QDEC\_Total\_Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Q\+D\+E\+C\+\_\+\+Total\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{P\+O\+R\+T\+\_\+t $\ast$}]{q\+Port,  }\item[{uint8\+\_\+t}]{q\+Pin,  }\item[{bool}]{inv\+IO,  }\item[{uint8\+\_\+t}]{q\+Ev\+Mux,  }\item[{E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t}]{q\+Pin\+Input,  }\item[{bool}]{use\+Index,  }\item[{E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t}]{q\+Index\+State,  }\item[{T\+C0\+\_\+t $\ast$}]{q\+Timer,  }\item[{T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t}]{q\+Event\+Channel,  }\item[{uint16\+\_\+t}]{line\+Count }\end{DoxyParamCaption})}
+
+
+
+Wrapperfunction to set up all parameters for the quadrature decoder. 
+
+This function combines the following functions for a total setup\+: Q\+D\+E\+C\+\_\+\+Port\+\_\+\+Setup, Q\+D\+E\+C\+\_\+\+E\+V\+S\+Y\+S\+\_\+\+Setup and Q\+D\+E\+C\+\_\+\+T\+C\+\_\+\+Dec\+\_\+\+Setup.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Port} & The port to use. \\
+\hline
+{\em q\+Pin} & The first input pin (Q\+D\+P\+H0) to use (0 -\/ 5/6). \\
+\hline
+{\em inv\+IO} & True if IO pins should be inverted.\\
+\hline
+{\em q\+Ev\+Mux} & Which event channel to use. Only 0, 2 and 4 is available. \\
+\hline
+{\em q\+Pin\+Input} & The pin input of Q\+D\+P\+H0 to the E\+V\+S\+Y\+S.\+C\+H\+M\+UX . \\
+\hline
+{\em use\+Index} & True if an optional Index pin is used. \\
+\hline
+{\em q\+Index\+State} & In which state the index signal will trigger.\\
+\hline
+{\em q\+Timer} & The timer to use for Q\+D\+EC. \\
+\hline
+{\em q\+Event\+Channel} & The event channel to listen to. \\
+\hline
+{\em line\+Count} & The number of lines in the quadrature encoder.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if setup was ok, false if any errors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{qdec__driver_8h_a99df634f8f0c486149db7440524c343f}\label{qdec__driver_8h_a99df634f8f0c486149db7440524c343f}} 
+\index{qdec\_driver.h@{qdec\_driver.h}!QDEC\_Total\_Setup@{QDEC\_Total\_Setup}}
+\index{QDEC\_Total\_Setup@{QDEC\_Total\_Setup}!qdec\_driver.h@{qdec\_driver.h}}
+\subsubsection{\texorpdfstring{QDEC\_Total\_Setup()}{QDEC\_Total\_Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Q\+D\+E\+C\+\_\+\+Total\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{P\+O\+R\+T\+\_\+t $\ast$}]{q\+Port,  }\item[{uint8\+\_\+t}]{q\+Pin,  }\item[{bool}]{inv\+IO,  }\item[{uint8\+\_\+t}]{q\+Ev\+Mux,  }\item[{E\+V\+S\+Y\+S\+\_\+\+C\+H\+M\+U\+X\+\_\+t}]{q\+Pin\+Input,  }\item[{bool}]{use\+Index,  }\item[{E\+V\+S\+Y\+S\+\_\+\+Q\+D\+I\+R\+M\+\_\+t}]{q\+Index\+State,  }\item[{T\+C1\+\_\+t $\ast$}]{q\+Timer,  }\item[{T\+C\+\_\+\+E\+V\+S\+E\+L\+\_\+t}]{q\+Event\+Channel,  }\item[{uint16\+\_\+t}]{line\+Count }\end{DoxyParamCaption})}
+

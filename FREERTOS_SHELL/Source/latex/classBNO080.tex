@@ -1,0 +1,405 @@
+\hypertarget{classBNO080}{}\section{B\+N\+O080 Class Reference}
+\label{classBNO080}\index{BNO080@{BNO080}}
+
+
+{\ttfamily \#include $<$B\+N\+O080\+\_\+\+Xmega\+\_\+\+Lib.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBNO080_a587f2ceae4b35e407cb76141f371e297}{B\+N\+O080}} (emstream $\ast$, bool print\+Debug)
+\item 
+bool \mbox{\hyperlink{classBNO080_a90592918c9267e9258e115325ac4b927}{begin}} (uint8\+\_\+t device\+Address=\mbox{\hyperlink{BNO080__Xmega__Lib_8h_a68a3909c1deb2c0e80c8db9a8e1d0e6c}{B\+N\+O080\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+R\+E\+SS}})
+\item 
+void \mbox{\hyperlink{classBNO080_a9a809f442316379dbef61e78d70f6b3a}{soft\+Reset}} ()
+\item 
+float \mbox{\hyperlink{classBNO080_a387ca93b51c1683425b051a35850053f}{q\+To\+Float}} (int16\+\_\+t fixed\+Point\+Value, uint8\+\_\+t q\+Point)
+\item 
+bool \mbox{\hyperlink{classBNO080_aef8677f90f76fb28ccda5c2b32b58a16}{wait\+For\+I2C}} ()
+\item 
+bool \mbox{\hyperlink{classBNO080_a88d8395534116c51613dda64f105f2fe}{receive\+Packet}} (void)
+\item 
+bool \mbox{\hyperlink{classBNO080_ac50fa6ed3ae8b5561ee42e9830c83a7c}{get\+Data}} (uint16\+\_\+t bytes\+Remaining)
+\item 
+bool \mbox{\hyperlink{classBNO080_a5923c7c051c3f311aea0535dc17a42e9}{send\+Packet}} (uint8\+\_\+t channel\+Number, uint8\+\_\+t data\+Length)
+\item 
+void \mbox{\hyperlink{classBNO080_a5d0a36bd71601dd845090be70640c206}{print\+Packet}} (void)
+\item 
+void \mbox{\hyperlink{classBNO080_a6e909dff75a75500117287304004aac6}{enable\+Rotation\+Vector}} (uint16\+\_\+t time\+Between\+Reports)
+\item 
+bool \mbox{\hyperlink{classBNO080_a27933a4623309a040eb0d456723ff57b}{data\+Available}} (void)
+\item 
+void \mbox{\hyperlink{classBNO080_a960b884f27623823999a69b2c3fa9925}{parse\+Input\+Report}} (void)
+\item 
+void \mbox{\hyperlink{classBNO080_a9e3c4765c00091b4766699e0d854de80}{parse\+Command\+Report}} (void)
+\item 
+float \mbox{\hyperlink{classBNO080_aa75bbd109ac767de5d588ad1151322c8}{get\+QuatI}} ()
+\item 
+float \mbox{\hyperlink{classBNO080_a2ca55d6200af2629d1d80e6c5577cb63}{get\+QuatJ}} ()
+\item 
+float \mbox{\hyperlink{classBNO080_abeb09e3600b140d7447d9e6a9ac81ad8}{get\+QuatK}} ()
+\item 
+float \mbox{\hyperlink{classBNO080_a3b0b23d3d061baff2858ffa440bc2b77}{get\+Quat\+Real}} ()
+\item 
+float \mbox{\hyperlink{classBNO080_a10b5cd695195620c7238cd48a7e366f5}{get\+Quat\+Radian\+Accuracy}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a35edcb9c8ffa4919d143472532ea7956}{get\+Quat\+Accuracy}} ()
+\item 
+void \mbox{\hyperlink{classBNO080_ad8ee71b985377d624e34dda56516ec97}{set\+Feature\+Command}} (uint8\+\_\+t report\+ID, uint16\+\_\+t time\+Between\+Reports)
+\item 
+void \mbox{\hyperlink{classBNO080_ac6c46a2c3e28f36b47123c761186e74d}{set\+Feature\+Command}} (uint8\+\_\+t report\+ID, uint16\+\_\+t time\+Between\+Reports, uint32\+\_\+t specific\+Config)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a61af3bfce34b10950631803443273fcf}{shtp\+Header}} \mbox{[}\mbox{\hyperlink{BNO080__Xmega__Lib_8h_aa80b64798e7ac4c96fe314006a5b99e9}{S\+H\+T\+P\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a1dc1f807ca4810d927a4ce9fcaec45ab}{shtp\+Data}} \mbox{[}\mbox{\hyperlink{BNO080__Xmega__Lib_8h_a879456c3b8e2853f7044d764e9c180d4}{M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_affdd3ab68081775957bcc48f51cb0a22}{sequence\+Number}} \mbox{[}6\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a86fa467e394e0c130f011d0762522337}{command\+Sequence\+Number}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a63b7d45588c001f20f020f2725c9631f}{\+\_\+device\+Address}}
+\item 
+emstream $\ast$ \mbox{\hyperlink{classBNO080_a433c3d711351932891cae82f59815c8c}{\+\_\+debug\+Port}}
+\item 
+bool \mbox{\hyperlink{classBNO080_afbc3eecdf2e4967684145d5f4bd49450}{\+\_\+print\+Debug}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a29fabde57a85f8377dfda2d4c042ef1f}{\+\_\+cs}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_adfa4c13dfbead9b7775423204a4c867f}{\+\_\+wake}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a8f2f224f4927b7dd1bfa5a3fcc74f570}{\+\_\+int}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_af610903c57d3d234a1371655bc0dc4c7}{\+\_\+rst}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_a43cf4f91fab63767e08bebcba9d510e8}{raw\+QuatI}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_a18a55be7e69460f8bcd35686b5ca0522}{raw\+QuatJ}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_aeb9ffda39fbb3993b0d6d65f87c49e17}{raw\+QuatK}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_a7d17a57aa32c285c2cdd242a36dde0c1}{raw\+Quat\+Real}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_a8a3948d98828f625f88ebe3fa5abf54a}{raw\+Quat\+Radian\+Accuracy}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classBNO080_a7f87a203f54007c5944bb47efee549e0}{quat\+Accuracy}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBNO080_a28a086a0c24b22f469d0a6155bc5ad9f}{calibration\+Status}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classBNO080_a544161adfb515e0691064c13b34ea5cf}{rotation\+Vector\+\_\+\+Q1}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \mbox{\hyperlink{classBNO080}{B\+N\+O080}} brief a Hillcrest Labs \mbox{\hyperlink{classBNO080}{B\+N\+O080}} device driver library for A\+Txmega. details I2C is accomplished using \mbox{\hyperlink{twi_8h}{twi.\+h}} and twi.\+c 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBNO080_a587f2ceae4b35e407cb76141f371e297}\label{classBNO080_a587f2ceae4b35e407cb76141f371e297}} 
+\index{BNO080@{BNO080}!BNO080@{BNO080}}
+\index{BNO080@{BNO080}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{BNO080()}{BNO080()}}
+{\footnotesize\ttfamily B\+N\+O080\+::\+B\+N\+O080 (\begin{DoxyParamCaption}\item[{emstream $\ast$}]{debug\+Port,  }\item[{bool}]{print\+Debug }\end{DoxyParamCaption})}
+
+This constructor creates a new \mbox{\hyperlink{classBNO080}{B\+N\+O080}} interfacing task. Its main job is to interface with the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} and handle it\textquotesingle{}s wierdness 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$debug\+Port} & A serial port used for printing debugging messages \\
+\hline
+{\em print\+Debug} & boolean that controls what messages are printed to the debug\+Port detail note that B\+N\+O080\+::\+Begin must be called after the constructor runs to finish setup. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBNO080_a90592918c9267e9258e115325ac4b927}\label{classBNO080_a90592918c9267e9258e115325ac4b927}} 
+\index{BNO080@{BNO080}!begin@{begin}}
+\index{begin@{begin}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{device\+Address = {\ttfamily \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a68a3909c1deb2c0e80c8db9a8e1d0e6c}{B\+N\+O080\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}} }\end{DoxyParamCaption})}
+
+This method attempts to communcate with the \mbox{\hyperlink{classBNO080}{B\+N\+O080}}, reset it, and flush all the startup messaging. 
+\begin{DoxyParams}{Parameters}
+{\em device\+Address} & The i2c address of the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_a27933a4623309a040eb0d456723ff57b}\label{classBNO080_a27933a4623309a040eb0d456723ff57b}} 
+\index{BNO080@{BNO080}!dataAvailable@{dataAvailable}}
+\index{dataAvailable@{dataAvailable}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{dataAvailable()}{dataAvailable()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::data\+Available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method checks if data is available from the I\+MU. If so, it parses the data based upon what kind of report it was. \mbox{\Hypertarget{classBNO080_a6e909dff75a75500117287304004aac6}\label{classBNO080_a6e909dff75a75500117287304004aac6}} 
+\index{BNO080@{BNO080}!enableRotationVector@{enableRotationVector}}
+\index{enableRotationVector@{enableRotationVector}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{enableRotationVector()}{enableRotationVector()}}
+{\footnotesize\ttfamily void B\+N\+O080\+::enable\+Rotation\+Vector (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{time\+Between\+Reports }\end{DoxyParamCaption})}
+
+This method configures the I\+MU to respond with the rotation vector every time\+Between\+Reports 
+\begin{DoxyParams}{Parameters}
+{\em time\+Between\+Reports} & Amount of time between reports from the I\+MU \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_ac50fa6ed3ae8b5561ee42e9830c83a7c}\label{classBNO080_ac50fa6ed3ae8b5561ee42e9830c83a7c}} 
+\index{BNO080@{BNO080}!getData@{getData}}
+\index{getData@{getData}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::get\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{bytes\+Remaining }\end{DoxyParamCaption})}
+
+This method reads packets from the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} 
+\begin{DoxyParams}{Parameters}
+{\em bytes\+Remaining} & The number of data bytes to read from the \mbox{\hyperlink{classBNO080}{B\+N\+O080}}, this neglects the header bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_a35edcb9c8ffa4919d143472532ea7956}\label{classBNO080_a35edcb9c8ffa4919d143472532ea7956}} 
+\index{BNO080@{BNO080}!getQuatAccuracy@{getQuatAccuracy}}
+\index{getQuatAccuracy@{getQuatAccuracy}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatAccuracy()}{getQuatAccuracy()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::get\+Quat\+Accuracy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBNO080_aa75bbd109ac767de5d588ad1151322c8}\label{classBNO080_aa75bbd109ac767de5d588ad1151322c8}} 
+\index{BNO080@{BNO080}!getQuatI@{getQuatI}}
+\index{getQuatI@{getQuatI}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatI()}{getQuatI()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::get\+QuatI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns i component of the rotation vector quaternion \mbox{\Hypertarget{classBNO080_a2ca55d6200af2629d1d80e6c5577cb63}\label{classBNO080_a2ca55d6200af2629d1d80e6c5577cb63}} 
+\index{BNO080@{BNO080}!getQuatJ@{getQuatJ}}
+\index{getQuatJ@{getQuatJ}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatJ()}{getQuatJ()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::get\+QuatJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns j component of the rotation vector quaternion \mbox{\Hypertarget{classBNO080_abeb09e3600b140d7447d9e6a9ac81ad8}\label{classBNO080_abeb09e3600b140d7447d9e6a9ac81ad8}} 
+\index{BNO080@{BNO080}!getQuatK@{getQuatK}}
+\index{getQuatK@{getQuatK}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatK()}{getQuatK()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::get\+QuatK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns k component of the rotation vector quaternion \mbox{\Hypertarget{classBNO080_a10b5cd695195620c7238cd48a7e366f5}\label{classBNO080_a10b5cd695195620c7238cd48a7e366f5}} 
+\index{BNO080@{BNO080}!getQuatRadianAccuracy@{getQuatRadianAccuracy}}
+\index{getQuatRadianAccuracy@{getQuatRadianAccuracy}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatRadianAccuracy()}{getQuatRadianAccuracy()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::get\+Quat\+Radian\+Accuracy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns quaternion accurate metric, see Hillcrest Labs S\+H\+TP manual for details \mbox{\Hypertarget{classBNO080_a3b0b23d3d061baff2858ffa440bc2b77}\label{classBNO080_a3b0b23d3d061baff2858ffa440bc2b77}} 
+\index{BNO080@{BNO080}!getQuatReal@{getQuatReal}}
+\index{getQuatReal@{getQuatReal}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{getQuatReal()}{getQuatReal()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::get\+Quat\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns read component of the rotation vector quaternion \mbox{\Hypertarget{classBNO080_a9e3c4765c00091b4766699e0d854de80}\label{classBNO080_a9e3c4765c00091b4766699e0d854de80}} 
+\index{BNO080@{BNO080}!parseCommandReport@{parseCommandReport}}
+\index{parseCommandReport@{parseCommandReport}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{parseCommandReport()}{parseCommandReport()}}
+{\footnotesize\ttfamily void B\+N\+O080\+::parse\+Command\+Report (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method deals with command reports, we mostly ignore these reports unless it\textquotesingle{}s about calibration. \mbox{\Hypertarget{classBNO080_a960b884f27623823999a69b2c3fa9925}\label{classBNO080_a960b884f27623823999a69b2c3fa9925}} 
+\index{BNO080@{BNO080}!parseInputReport@{parseInputReport}}
+\index{parseInputReport@{parseInputReport}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{parseInputReport()}{parseInputReport()}}
+{\footnotesize\ttfamily void B\+N\+O080\+::parse\+Input\+Report (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method parses value update packets from the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} and writes updated values to relevant variables \mbox{\Hypertarget{classBNO080_a5d0a36bd71601dd845090be70640c206}\label{classBNO080_a5d0a36bd71601dd845090be70640c206}} 
+\index{BNO080@{BNO080}!printPacket@{printPacket}}
+\index{printPacket@{printPacket}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{printPacket()}{printPacket()}}
+{\footnotesize\ttfamily void B\+N\+O080\+::print\+Packet (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method prints the contents of the last packet to be read by the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} in an easy to read format. \mbox{\Hypertarget{classBNO080_a387ca93b51c1683425b051a35850053f}\label{classBNO080_a387ca93b51c1683425b051a35850053f}} 
+\index{BNO080@{BNO080}!qToFloat@{qToFloat}}
+\index{qToFloat@{qToFloat}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{qToFloat()}{qToFloat()}}
+{\footnotesize\ttfamily float B\+N\+O080\+::q\+To\+Float (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{fixed\+Point\+Value,  }\item[{uint8\+\_\+t}]{q\+Point }\end{DoxyParamCaption})}
+
+This method converts a uint16\+\_\+t to a float 
+\begin{DoxyParams}{Parameters}
+{\em fixed\+Point\+Value} & The uint16\+\_\+t variable to be converted \\
+\hline
+{\em q\+Point} & the variable to store the float in. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_a88d8395534116c51613dda64f105f2fe}\label{classBNO080_a88d8395534116c51613dda64f105f2fe}} 
+\index{BNO080@{BNO080}!receivePacket@{receivePacket}}
+\index{receivePacket@{receivePacket}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{receivePacket()}{receivePacket()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::receive\+Packet (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method reads packets from the \mbox{\hyperlink{classBNO080}{B\+N\+O080}} \mbox{\Hypertarget{classBNO080_a5923c7c051c3f311aea0535dc17a42e9}\label{classBNO080_a5923c7c051c3f311aea0535dc17a42e9}} 
+\index{BNO080@{BNO080}!sendPacket@{sendPacket}}
+\index{sendPacket@{sendPacket}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{sendPacket()}{sendPacket()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::send\+Packet (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel\+Number,  }\item[{uint8\+\_\+t}]{data\+Length }\end{DoxyParamCaption})}
+
+This method sends the packet configured by set\+Feature\+Command 
+\begin{DoxyParams}{Parameters}
+{\em channel\+Number} & The channel of the I\+MU this packet goes to \\
+\hline
+{\em data\+Length} & The length of the packet in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_ad8ee71b985377d624e34dda56516ec97}\label{classBNO080_ad8ee71b985377d624e34dda56516ec97}} 
+\index{BNO080@{BNO080}!setFeatureCommand@{setFeatureCommand}}
+\index{setFeatureCommand@{setFeatureCommand}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{setFeatureCommand()}{setFeatureCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void B\+N\+O080\+::set\+Feature\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{report\+ID,  }\item[{uint16\+\_\+t}]{time\+Between\+Reports }\end{DoxyParamCaption})}
+
+This method takes a report ID and response time and sets the default config, then passes to it\textquotesingle{}s overloaded brethern 
+\begin{DoxyParams}{Parameters}
+{\em report\+ID} & The report ID, see S\+H\+TP manual for details \\
+\hline
+{\em time\+Between\+Reports} & What it sounds like \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_ac6c46a2c3e28f36b47123c761186e74d}\label{classBNO080_ac6c46a2c3e28f36b47123c761186e74d}} 
+\index{BNO080@{BNO080}!setFeatureCommand@{setFeatureCommand}}
+\index{setFeatureCommand@{setFeatureCommand}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{setFeatureCommand()}{setFeatureCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void B\+N\+O080\+::set\+Feature\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{report\+ID,  }\item[{uint16\+\_\+t}]{time\+Between\+Reports,  }\item[{uint32\+\_\+t}]{specific\+Config }\end{DoxyParamCaption})}
+
+This method takes a report ID and response time and specific config, then sets up the \mbox{\hyperlink{classBNO080}{B\+N\+O080}}. 
+\begin{DoxyParams}{Parameters}
+{\em report\+ID} & The report ID, see S\+H\+TP manual for details \\
+\hline
+{\em time\+Between\+Reports} & What it sounds like \\
+\hline
+{\em specific\+Config} & The specific config of the report, see S\+H\+TP manual \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBNO080_a9a809f442316379dbef61e78d70f6b3a}\label{classBNO080_a9a809f442316379dbef61e78d70f6b3a}} 
+\index{BNO080@{BNO080}!softReset@{softReset}}
+\index{softReset@{softReset}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{softReset()}{softReset()}}
+{\footnotesize\ttfamily void B\+N\+O080\+::soft\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method tells the I\+MU to do a software reset \mbox{\Hypertarget{classBNO080_aef8677f90f76fb28ccda5c2b32b58a16}\label{classBNO080_aef8677f90f76fb28ccda5c2b32b58a16}} 
+\index{BNO080@{BNO080}!waitForI2C@{waitForI2C}}
+\index{waitForI2C@{waitForI2C}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{waitForI2C()}{waitForI2C()}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::wait\+For\+I2C (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method is not used in the xmega implementation, but remains because it\textquotesingle{}s called often in other methods 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classBNO080_a29fabde57a85f8377dfda2d4c042ef1f}\label{classBNO080_a29fabde57a85f8377dfda2d4c042ef1f}} 
+\index{BNO080@{BNO080}!\_cs@{\_cs}}
+\index{\_cs@{\_cs}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_cs}{\_cs}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::\+\_\+cs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a433c3d711351932891cae82f59815c8c}\label{classBNO080_a433c3d711351932891cae82f59815c8c}} 
+\index{BNO080@{BNO080}!\_debugPort@{\_debugPort}}
+\index{\_debugPort@{\_debugPort}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_debugPort}{\_debugPort}}
+{\footnotesize\ttfamily emstream$\ast$ B\+N\+O080\+::\+\_\+debug\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a63b7d45588c001f20f020f2725c9631f}\label{classBNO080_a63b7d45588c001f20f020f2725c9631f}} 
+\index{BNO080@{BNO080}!\_deviceAddress@{\_deviceAddress}}
+\index{\_deviceAddress@{\_deviceAddress}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_deviceAddress}{\_deviceAddress}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::\+\_\+device\+Address\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a8f2f224f4927b7dd1bfa5a3fcc74f570}\label{classBNO080_a8f2f224f4927b7dd1bfa5a3fcc74f570}} 
+\index{BNO080@{BNO080}!\_int@{\_int}}
+\index{\_int@{\_int}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_int}{\_int}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::\+\_\+int\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_afbc3eecdf2e4967684145d5f4bd49450}\label{classBNO080_afbc3eecdf2e4967684145d5f4bd49450}} 
+\index{BNO080@{BNO080}!\_printDebug@{\_printDebug}}
+\index{\_printDebug@{\_printDebug}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_printDebug}{\_printDebug}}
+{\footnotesize\ttfamily bool B\+N\+O080\+::\+\_\+print\+Debug\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_af610903c57d3d234a1371655bc0dc4c7}\label{classBNO080_af610903c57d3d234a1371655bc0dc4c7}} 
+\index{BNO080@{BNO080}!\_rst@{\_rst}}
+\index{\_rst@{\_rst}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_rst}{\_rst}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::\+\_\+rst\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_adfa4c13dfbead9b7775423204a4c867f}\label{classBNO080_adfa4c13dfbead9b7775423204a4c867f}} 
+\index{BNO080@{BNO080}!\_wake@{\_wake}}
+\index{\_wake@{\_wake}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{\_wake}{\_wake}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::\+\_\+wake\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a28a086a0c24b22f469d0a6155bc5ad9f}\label{classBNO080_a28a086a0c24b22f469d0a6155bc5ad9f}} 
+\index{BNO080@{BNO080}!calibrationStatus@{calibrationStatus}}
+\index{calibrationStatus@{calibrationStatus}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{calibrationStatus}{calibrationStatus}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::calibration\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a86fa467e394e0c130f011d0762522337}\label{classBNO080_a86fa467e394e0c130f011d0762522337}} 
+\index{BNO080@{BNO080}!commandSequenceNumber@{commandSequenceNumber}}
+\index{commandSequenceNumber@{commandSequenceNumber}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{commandSequenceNumber}{commandSequenceNumber}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::command\+Sequence\+Number}
+
+\mbox{\Hypertarget{classBNO080_a7f87a203f54007c5944bb47efee549e0}\label{classBNO080_a7f87a203f54007c5944bb47efee549e0}} 
+\index{BNO080@{BNO080}!quatAccuracy@{quatAccuracy}}
+\index{quatAccuracy@{quatAccuracy}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{quatAccuracy}{quatAccuracy}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::quat\+Accuracy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a43cf4f91fab63767e08bebcba9d510e8}\label{classBNO080_a43cf4f91fab63767e08bebcba9d510e8}} 
+\index{BNO080@{BNO080}!rawQuatI@{rawQuatI}}
+\index{rawQuatI@{rawQuatI}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rawQuatI}{rawQuatI}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::raw\+QuatI\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a18a55be7e69460f8bcd35686b5ca0522}\label{classBNO080_a18a55be7e69460f8bcd35686b5ca0522}} 
+\index{BNO080@{BNO080}!rawQuatJ@{rawQuatJ}}
+\index{rawQuatJ@{rawQuatJ}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rawQuatJ}{rawQuatJ}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::raw\+QuatJ\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_aeb9ffda39fbb3993b0d6d65f87c49e17}\label{classBNO080_aeb9ffda39fbb3993b0d6d65f87c49e17}} 
+\index{BNO080@{BNO080}!rawQuatK@{rawQuatK}}
+\index{rawQuatK@{rawQuatK}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rawQuatK}{rawQuatK}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::raw\+QuatK\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a8a3948d98828f625f88ebe3fa5abf54a}\label{classBNO080_a8a3948d98828f625f88ebe3fa5abf54a}} 
+\index{BNO080@{BNO080}!rawQuatRadianAccuracy@{rawQuatRadianAccuracy}}
+\index{rawQuatRadianAccuracy@{rawQuatRadianAccuracy}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rawQuatRadianAccuracy}{rawQuatRadianAccuracy}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::raw\+Quat\+Radian\+Accuracy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a7d17a57aa32c285c2cdd242a36dde0c1}\label{classBNO080_a7d17a57aa32c285c2cdd242a36dde0c1}} 
+\index{BNO080@{BNO080}!rawQuatReal@{rawQuatReal}}
+\index{rawQuatReal@{rawQuatReal}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rawQuatReal}{rawQuatReal}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+N\+O080\+::raw\+Quat\+Real\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_a544161adfb515e0691064c13b34ea5cf}\label{classBNO080_a544161adfb515e0691064c13b34ea5cf}} 
+\index{BNO080@{BNO080}!rotationVector\_Q1@{rotationVector\_Q1}}
+\index{rotationVector\_Q1@{rotationVector\_Q1}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{rotationVector\_Q1}{rotationVector\_Q1}}
+{\footnotesize\ttfamily int16\+\_\+t B\+N\+O080\+::rotation\+Vector\+\_\+\+Q1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBNO080_affdd3ab68081775957bcc48f51cb0a22}\label{classBNO080_affdd3ab68081775957bcc48f51cb0a22}} 
+\index{BNO080@{BNO080}!sequenceNumber@{sequenceNumber}}
+\index{sequenceNumber@{sequenceNumber}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{sequenceNumber}{sequenceNumber}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::sequence\+Number\mbox{[}6\mbox{]}}
+
+\mbox{\Hypertarget{classBNO080_a1dc1f807ca4810d927a4ce9fcaec45ab}\label{classBNO080_a1dc1f807ca4810d927a4ce9fcaec45ab}} 
+\index{BNO080@{BNO080}!shtpData@{shtpData}}
+\index{shtpData@{shtpData}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{shtpData}{shtpData}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::shtp\+Data\mbox{[}\mbox{\hyperlink{BNO080__Xmega__Lib_8h_a879456c3b8e2853f7044d764e9c180d4}{M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+\mbox{\Hypertarget{classBNO080_a61af3bfce34b10950631803443273fcf}\label{classBNO080_a61af3bfce34b10950631803443273fcf}} 
+\index{BNO080@{BNO080}!shtpHeader@{shtpHeader}}
+\index{shtpHeader@{shtpHeader}!BNO080@{BNO080}}
+\subsubsection{\texorpdfstring{shtpHeader}{shtpHeader}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+N\+O080\+::shtp\+Header\mbox{[}\mbox{\hyperlink{BNO080__Xmega__Lib_8h_aa80b64798e7ac4c96fe314006a5b99e9}{S\+H\+T\+P\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BNO080__Xmega__Lib_8h}{B\+N\+O080\+\_\+\+Xmega\+\_\+\+Lib.\+h}}\item 
+\mbox{\hyperlink{BNO080__Xmega__Lib_8cpp}{B\+N\+O080\+\_\+\+Xmega\+\_\+\+Lib.\+cpp}}\end{DoxyCompactItemize}

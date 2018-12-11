@@ -1,0 +1,211 @@
+\hypertarget{shares_8h}{}\section{shares.\+h File Reference}
+\label{shares_8h}\index{shares.h@{shares.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shares_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+frt\+\_\+text\+\_\+queue \mbox{\hyperlink{shares_8h_ac6101a51dea354838bee0a6f0402ea1a}{print\+\_\+ser\+\_\+queue}}
+\begin{DoxyCompactList}\small\item\em This queue allows tasks to send characters to the user interface task for display. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a6e7d75d14d8d63a3ef01627b141168c0}{Robot\+\_\+\+Pos\+\_\+\+X\+\_\+\+I\+N\+E\+RT}}
+\begin{DoxyCompactList}\small\item\em This share contains the current X position of the robot. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a803e1e3e817f26285c2d2bb4de6626ac}{Robot\+\_\+\+Pos\+\_\+\+Y\+\_\+\+I\+N\+E\+RT}}
+\begin{DoxyCompactList}\small\item\em This share contains the current Y position of the robot. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_ab978c426fa641e17471ff0e6fbbbcfe0}{Robot\+\_\+\+Angle\+\_\+\+Theta\+\_\+\+I\+N\+E\+RT}}
+\begin{DoxyCompactList}\small\item\em This share contains the current angle of the robot. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a6e35b2feb55469714772cd4882dc58eb}{setpoint\+\_\+l\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a83349967d16e9fc5ad40b19701a44aeb}{setpoint\+\_\+l\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_ad2bc1725c4ea627634f7beb5572d0548}{angle\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a5aff019f36a289cc6b328d7c7828b408}{setpoint\+\_\+a\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em This share contains the current angular setpoint of motor 1. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a37cab2829eced5a471e1ef0146dc3e54}{setpoint\+\_\+a\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em This share contains the current angular setpoint of motor 2. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_ae58c7ce6bb57a5938b9a304ee76adc07}{pwm\+\_\+tot\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a9a919632d106dd3a17dfccb280c959b8}{pwm\+\_\+tot\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a80959280caa751d596f7104c98d4737b}{esum\+\_\+l\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a90df9ead68ebede9af8fd27e8313a59e}{esum\+\_\+l\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_ae68f0fbd85d830c139bf828e3d9ddb48}{esum\+\_\+a\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_ae9c58ea19a2a1a802a9e12a4b43c7629}{esum\+\_\+a\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a496a2b036312b9c55f1672f11912127f}{pwm\+\_\+lin\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a3c61b982d36d28fcda1fbe19b2f2217f}{pwm\+\_\+lin\+\_\+2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a1f44a9557cf93752b00ff0529e9f9082}{pwm\+\_\+ang\+\_\+1}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_aa1c49a28fcac3871f217ed626a583f06}{pwm\+\_\+ang\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em These shares are for diagnostic purposes only. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{shares_8h_a3db590989536daa88fc3c5a37ccb47e8}{Linear\+Distance}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains extern declarations for queues and other inter-\/task data communication objects used in a M\+E405/507/\+Free\+R\+T\+OS project.
+
+Revisions\+: \begin{DoxyItemize}
+\item 09-\/30-\/2012 J\+RR Original file was a one-\/file demonstration with two tasks \item 10-\/05-\/2012 J\+RR Split into multiple files, one for each task plus a main one \item 10-\/29-\/2012 J\+RR Reorganized with global queue and shared data references\end{DoxyItemize}
+License\+: This file is copyright 2012 by JR Ridgely and released under the Lesser G\+NU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{shares_8h_ad2bc1725c4ea627634f7beb5572d0548}\label{shares_8h_ad2bc1725c4ea627634f7beb5572d0548}} 
+\index{shares.h@{shares.h}!angle\_2@{angle\_2}}
+\index{angle\_2@{angle\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{angle\_2}{angle\_2}}
+{\footnotesize\ttfamily int16\+\_\+t angle\+\_\+2}
+
+\mbox{\Hypertarget{shares_8h_ae68f0fbd85d830c139bf828e3d9ddb48}\label{shares_8h_ae68f0fbd85d830c139bf828e3d9ddb48}} 
+\index{shares.h@{shares.h}!esum\_a\_1@{esum\_a\_1}}
+\index{esum\_a\_1@{esum\_a\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{esum\_a\_1}{esum\_a\_1}}
+{\footnotesize\ttfamily esum\+\_\+a\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_ae9c58ea19a2a1a802a9e12a4b43c7629}\label{shares_8h_ae9c58ea19a2a1a802a9e12a4b43c7629}} 
+\index{shares.h@{shares.h}!esum\_a\_2@{esum\_a\_2}}
+\index{esum\_a\_2@{esum\_a\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{esum\_a\_2}{esum\_a\_2}}
+{\footnotesize\ttfamily esum\+\_\+a\+\_\+2}
+
+\mbox{\Hypertarget{shares_8h_a80959280caa751d596f7104c98d4737b}\label{shares_8h_a80959280caa751d596f7104c98d4737b}} 
+\index{shares.h@{shares.h}!esum\_l\_1@{esum\_l\_1}}
+\index{esum\_l\_1@{esum\_l\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{esum\_l\_1}{esum\_l\_1}}
+{\footnotesize\ttfamily esum\+\_\+l\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_a90df9ead68ebede9af8fd27e8313a59e}\label{shares_8h_a90df9ead68ebede9af8fd27e8313a59e}} 
+\index{shares.h@{shares.h}!esum\_l\_2@{esum\_l\_2}}
+\index{esum\_l\_2@{esum\_l\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{esum\_l\_2}{esum\_l\_2}}
+{\footnotesize\ttfamily esum\+\_\+l\+\_\+2}
+
+\mbox{\Hypertarget{shares_8h_a3db590989536daa88fc3c5a37ccb47e8}\label{shares_8h_a3db590989536daa88fc3c5a37ccb47e8}} 
+\index{shares.h@{shares.h}!LinearDistance@{LinearDistance}}
+\index{LinearDistance@{LinearDistance}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{LinearDistance}{LinearDistance}}
+{\footnotesize\ttfamily int16\+\_\+t Linear\+Distance}
+
+\mbox{\Hypertarget{shares_8h_ac6101a51dea354838bee0a6f0402ea1a}\label{shares_8h_ac6101a51dea354838bee0a6f0402ea1a}} 
+\index{shares.h@{shares.h}!print\_ser\_queue@{print\_ser\_queue}}
+\index{print\_ser\_queue@{print\_ser\_queue}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{print\_ser\_queue}{print\_ser\_queue}}
+{\footnotesize\ttfamily print\+\_\+ser\+\_\+queue}
+
+
+
+This queue allows tasks to send characters to the user interface task for display. 
+
+\mbox{\Hypertarget{shares_8h_a1f44a9557cf93752b00ff0529e9f9082}\label{shares_8h_a1f44a9557cf93752b00ff0529e9f9082}} 
+\index{shares.h@{shares.h}!pwm\_ang\_1@{pwm\_ang\_1}}
+\index{pwm\_ang\_1@{pwm\_ang\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_ang\_1}{pwm\_ang\_1}}
+{\footnotesize\ttfamily pwm\+\_\+ang\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_aa1c49a28fcac3871f217ed626a583f06}\label{shares_8h_aa1c49a28fcac3871f217ed626a583f06}} 
+\index{shares.h@{shares.h}!pwm\_ang\_2@{pwm\_ang\_2}}
+\index{pwm\_ang\_2@{pwm\_ang\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_ang\_2}{pwm\_ang\_2}}
+{\footnotesize\ttfamily pwm\+\_\+ang\+\_\+2}
+
+
+
+These shares are for diagnostic purposes only. 
+
+\mbox{\Hypertarget{shares_8h_a496a2b036312b9c55f1672f11912127f}\label{shares_8h_a496a2b036312b9c55f1672f11912127f}} 
+\index{shares.h@{shares.h}!pwm\_lin\_1@{pwm\_lin\_1}}
+\index{pwm\_lin\_1@{pwm\_lin\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_lin\_1}{pwm\_lin\_1}}
+{\footnotesize\ttfamily pwm\+\_\+lin\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_a3c61b982d36d28fcda1fbe19b2f2217f}\label{shares_8h_a3c61b982d36d28fcda1fbe19b2f2217f}} 
+\index{shares.h@{shares.h}!pwm\_lin\_2@{pwm\_lin\_2}}
+\index{pwm\_lin\_2@{pwm\_lin\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_lin\_2}{pwm\_lin\_2}}
+{\footnotesize\ttfamily pwm\+\_\+lin\+\_\+2}
+
+\mbox{\Hypertarget{shares_8h_ae58c7ce6bb57a5938b9a304ee76adc07}\label{shares_8h_ae58c7ce6bb57a5938b9a304ee76adc07}} 
+\index{shares.h@{shares.h}!pwm\_tot\_1@{pwm\_tot\_1}}
+\index{pwm\_tot\_1@{pwm\_tot\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_tot\_1}{pwm\_tot\_1}}
+{\footnotesize\ttfamily pwm\+\_\+tot\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_a9a919632d106dd3a17dfccb280c959b8}\label{shares_8h_a9a919632d106dd3a17dfccb280c959b8}} 
+\index{shares.h@{shares.h}!pwm\_tot\_2@{pwm\_tot\_2}}
+\index{pwm\_tot\_2@{pwm\_tot\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{pwm\_tot\_2}{pwm\_tot\_2}}
+{\footnotesize\ttfamily pwm\+\_\+tot\+\_\+2}
+
+\mbox{\Hypertarget{shares_8h_ab978c426fa641e17471ff0e6fbbbcfe0}\label{shares_8h_ab978c426fa641e17471ff0e6fbbbcfe0}} 
+\index{shares.h@{shares.h}!Robot\_Angle\_Theta\_INERT@{Robot\_Angle\_Theta\_INERT}}
+\index{Robot\_Angle\_Theta\_INERT@{Robot\_Angle\_Theta\_INERT}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{Robot\_Angle\_Theta\_INERT}{Robot\_Angle\_Theta\_INERT}}
+{\footnotesize\ttfamily Robot\+\_\+\+Angle\+\_\+\+Theta\+\_\+\+I\+N\+E\+RT}
+
+
+
+This share contains the current angle of the robot. 
+
+\mbox{\Hypertarget{shares_8h_a6e7d75d14d8d63a3ef01627b141168c0}\label{shares_8h_a6e7d75d14d8d63a3ef01627b141168c0}} 
+\index{shares.h@{shares.h}!Robot\_Pos\_X\_INERT@{Robot\_Pos\_X\_INERT}}
+\index{Robot\_Pos\_X\_INERT@{Robot\_Pos\_X\_INERT}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{Robot\_Pos\_X\_INERT}{Robot\_Pos\_X\_INERT}}
+{\footnotesize\ttfamily Robot\+\_\+\+Pos\+\_\+\+X\+\_\+\+I\+N\+E\+RT}
+
+
+
+This share contains the current X position of the robot. 
+
+\mbox{\Hypertarget{shares_8h_a803e1e3e817f26285c2d2bb4de6626ac}\label{shares_8h_a803e1e3e817f26285c2d2bb4de6626ac}} 
+\index{shares.h@{shares.h}!Robot\_Pos\_Y\_INERT@{Robot\_Pos\_Y\_INERT}}
+\index{Robot\_Pos\_Y\_INERT@{Robot\_Pos\_Y\_INERT}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{Robot\_Pos\_Y\_INERT}{Robot\_Pos\_Y\_INERT}}
+{\footnotesize\ttfamily Robot\+\_\+\+Pos\+\_\+\+Y\+\_\+\+I\+N\+E\+RT}
+
+
+
+This share contains the current Y position of the robot. 
+
+\mbox{\Hypertarget{shares_8h_a5aff019f36a289cc6b328d7c7828b408}\label{shares_8h_a5aff019f36a289cc6b328d7c7828b408}} 
+\index{shares.h@{shares.h}!setpoint\_a\_1@{setpoint\_a\_1}}
+\index{setpoint\_a\_1@{setpoint\_a\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{setpoint\_a\_1}{setpoint\_a\_1}}
+{\footnotesize\ttfamily setpoint\+\_\+a\+\_\+1}
+
+
+
+This share contains the current angular setpoint of motor 1. 
+
+\mbox{\Hypertarget{shares_8h_a37cab2829eced5a471e1ef0146dc3e54}\label{shares_8h_a37cab2829eced5a471e1ef0146dc3e54}} 
+\index{shares.h@{shares.h}!setpoint\_a\_2@{setpoint\_a\_2}}
+\index{setpoint\_a\_2@{setpoint\_a\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{setpoint\_a\_2}{setpoint\_a\_2}}
+{\footnotesize\ttfamily setpoint\+\_\+a\+\_\+2}
+
+
+
+This share contains the current angular setpoint of motor 2. 
+
+\mbox{\Hypertarget{shares_8h_a6e35b2feb55469714772cd4882dc58eb}\label{shares_8h_a6e35b2feb55469714772cd4882dc58eb}} 
+\index{shares.h@{shares.h}!setpoint\_l\_1@{setpoint\_l\_1}}
+\index{setpoint\_l\_1@{setpoint\_l\_1}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{setpoint\_l\_1}{setpoint\_l\_1}}
+{\footnotesize\ttfamily int16\+\_\+t setpoint\+\_\+l\+\_\+1}
+
+\mbox{\Hypertarget{shares_8h_a83349967d16e9fc5ad40b19701a44aeb}\label{shares_8h_a83349967d16e9fc5ad40b19701a44aeb}} 
+\index{shares.h@{shares.h}!setpoint\_l\_2@{setpoint\_l\_2}}
+\index{setpoint\_l\_2@{setpoint\_l\_2}!shares.h@{shares.h}}
+\subsubsection{\texorpdfstring{setpoint\_l\_2}{setpoint\_l\_2}}
+{\footnotesize\ttfamily int16\+\_\+t setpoint\+\_\+l\+\_\+2}
+

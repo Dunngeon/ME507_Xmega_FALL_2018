@@ -1,0 +1,454 @@
+\hypertarget{BNO080__Xmega__Lib_8h}{}\section{B\+N\+O080\+\_\+\+Xmega\+\_\+\+Lib.\+h File Reference}
+\label{BNO080__Xmega__Lib_8h}\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+{\ttfamily \#include \char`\"{}twi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/wdt.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}croutine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rs232int.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+text\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+shared\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+Include dependency graph for B\+N\+O080\+\_\+\+Xmega\+\_\+\+Lib.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BNO080__Xmega__Lib_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{BNO080__Xmega__Lib_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBNO080}{B\+N\+O080}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a68a3909c1deb2c0e80c8db9a8e1d0e6c}{B\+N\+O080\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x4B
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aab040ced3ff06bdd71655d55a5f8db14}{I2\+C\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}~25
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a70adad31d9742d7c7e259edee4d39172}{C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+M\+M\+A\+ND}}~0
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_ab9ce01d8030e77942b6be6b7f62fb767}{C\+H\+A\+N\+N\+E\+L\+\_\+\+E\+X\+E\+C\+U\+T\+A\+B\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aaaf3e4e2899b53efa937ba9b191af4e4}{C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+OL}}~2
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aa36d9a224dd63eef7dbc458db5689b05}{C\+H\+A\+N\+N\+E\+L\+\_\+\+R\+E\+P\+O\+R\+TS}}~3
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a8e54131248228626e10e49608bbf9911}{C\+H\+A\+N\+N\+E\+L\+\_\+\+W\+A\+K\+E\+\_\+\+R\+E\+P\+O\+R\+TS}}~4
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a7458d654ab9cdf099261b584f2b84128}{C\+H\+A\+N\+N\+E\+L\+\_\+\+G\+Y\+RO}}~5
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a83dafc26b6e579e8018a2c16937857ab}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}~0x\+F1
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a712010ee4857ccba8ee5ed9205b6ae20}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}}~0x\+F2
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a83ce806fd455b8144a141cde9517c9cc}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+F\+R\+S\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}~0x\+F3
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_ab985095047ff984572bb7178104c7b58}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+F\+R\+S\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a7dc2542911610758df8edc4e54b7e440}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+I\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}~0x\+F8
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a6d7a876cde7121e3ae0eb00cfab250b2}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+I\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}}~0x\+F9
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a5a4c96c04cc37f684a86bfd8a13b28b2}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}}~0x\+FB
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a8e7664b3054c74b2df9531eee21266fb}{S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+C\+O\+M\+M\+A\+ND}}~0x\+FD
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a09b4744152d1b660fd4890d7e6bf0441}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER}}~0x01
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a50ce10b6e19566d6392d233a3bd65e65}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}}~0x02
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a56280e66ead058e104abba5cc8ec833d}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+F\+I\+E\+LD}}~0x03
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a4f14c584ded02a79614ff9147a047c92}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}~0x04
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a9e0bbd70afccd248e490afeb75acce84}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR}}~0x05
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a792333e8edabd5a2e0226e591f26c866}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+R\+A\+V\+I\+TY}}~0x06
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a380de286d28fdffc46c0e46fb7c38e1c}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+A\+M\+E\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR}}~0x08
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_adc1f0507cfa1f9e4af977214469a0c8c}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+E\+O\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR}}~0x09
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a8487c1e8abdd04acc638eefc1529f73b}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+T\+A\+P\+\_\+\+D\+E\+T\+E\+C\+T\+OR}}~0x10
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_abf209ac6e007b2abf9ef417109ff6345}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+S\+T\+E\+P\+\_\+\+C\+O\+U\+N\+T\+ER}}~0x11
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_adb6bc6abf76110d5cbcc66d22e6a1b95}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+ER}}~0x13
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aded67cfe6df6776e6421e32237502ec1}{S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+P\+E\+R\+S\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+ER}}~0x1E
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a20f1f719ae8e641a6f63d739f3aa3718}{F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER}}~0x\+E302
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a773c0d189520f9eef940c9536efc6feb}{F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}}~0x\+E306
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a16f6656ff3952d2eaba9d770d8ad2d9b}{F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}}~0x\+E309
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a3247afd7df0287a44853f0f160c59bd1}{F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR}}~0x\+E30B
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a7b6a4e2b8711d1ea1dcb5e78cb74b187}{C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+R\+R\+O\+RS}}~1
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a361f2e25a5da7e27939139056bac405a}{C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+O\+U\+N\+T\+ER}}~2
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a1daf33c991611231a605b94526d88e76}{C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+A\+RE}}~3
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a5ddd2003fd5f044411cf7cc64e0c91d2}{C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+ZE}}~4
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a7876f0a534ece48f210afcec96e243db}{C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+CD}}~6
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aab17d20d03850bd332750d160eda0fb8}{C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+TE}}~7
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a98183d708468ecf64e773ae87b30fb1c}{C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+C\+D\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+S\+A\+VE}}~9
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_af12e5122c8920c9c036d22330f0f76cc}{C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+S\+C\+I\+L\+L\+A\+T\+OR}}~10
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a0cc14dd9340d970f05e3a39b3c7d1e34}{C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R\+\_\+\+D\+CD}}~11
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a8c8eb1a976126d59c19ef18ed5433fe0}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+C\+C\+EL}}~0
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a569b858724110ebdf2b363885b02d85c}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO}}~1
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a9c9dfa832505273c4f24b493c2b847fa}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+M\+AG}}~2
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_af45d16534dcc29b8db43dfa73842d8da}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+P\+L\+A\+N\+A\+R\+\_\+\+A\+C\+C\+EL}}~3
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a7f86dd66ca20c54d92b856147823b1b6}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+G\+Y\+R\+O\+\_\+\+M\+AG}}~4
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a68b86435799919112ddd9a60f502a58b}{C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+S\+T\+OP}}~5
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_a879456c3b8e2853f7044d764e9c180d4}{M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}~128
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aa6cd4fc5568a0b0fb40391a2fea3b69e}{M\+A\+X\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}}~9
+\item 
+\#define \mbox{\hyperlink{BNO080__Xmega__Lib_8h_aa80b64798e7ac4c96fe314006a5b99e9}{S\+H\+T\+P\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~4
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains source code for a \mbox{\hyperlink{classBNO080}{B\+N\+O080}} I\+MU device driver.
+
+Revisions\+: \begin{DoxyItemize}
+\item 12-\/28-\/17 Written by Nathan Seidle @ Spark\+Fun Electronics \item 11-\/28-\/18 Adapted for Xmega -\/ Ryan Dunn -\/ Adapted for Xmega\end{DoxyItemize}
+License\+: This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a68a3909c1deb2c0e80c8db9a8e1d0e6c}\label{BNO080__Xmega__Lib_8h_a68a3909c1deb2c0e80c8db9a8e1d0e6c}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!BNO080\_DEFAULT\_ADDRESS@{BNO080\_DEFAULT\_ADDRESS}}
+\index{BNO080\_DEFAULT\_ADDRESS@{BNO080\_DEFAULT\_ADDRESS}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{BNO080\_DEFAULT\_ADDRESS}{BNO080\_DEFAULT\_ADDRESS}}
+{\footnotesize\ttfamily \#define B\+N\+O080\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+R\+E\+SS~0x4B}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a8c8eb1a976126d59c19ef18ed5433fe0}\label{BNO080__Xmega__Lib_8h_a8c8eb1a976126d59c19ef18ed5433fe0}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_ACCEL@{CALIBRATE\_ACCEL}}
+\index{CALIBRATE\_ACCEL@{CALIBRATE\_ACCEL}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_ACCEL}{CALIBRATE\_ACCEL}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+C\+C\+EL~0}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a7f86dd66ca20c54d92b856147823b1b6}\label{BNO080__Xmega__Lib_8h_a7f86dd66ca20c54d92b856147823b1b6}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_ACCEL\_GYRO\_MAG@{CALIBRATE\_ACCEL\_GYRO\_MAG}}
+\index{CALIBRATE\_ACCEL\_GYRO\_MAG@{CALIBRATE\_ACCEL\_GYRO\_MAG}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_ACCEL\_GYRO\_MAG}{CALIBRATE\_ACCEL\_GYRO\_MAG}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+C\+C\+E\+L\+\_\+\+G\+Y\+R\+O\+\_\+\+M\+AG~4}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a569b858724110ebdf2b363885b02d85c}\label{BNO080__Xmega__Lib_8h_a569b858724110ebdf2b363885b02d85c}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_GYRO@{CALIBRATE\_GYRO}}
+\index{CALIBRATE\_GYRO@{CALIBRATE\_GYRO}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_GYRO}{CALIBRATE\_GYRO}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO~1}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a9c9dfa832505273c4f24b493c2b847fa}\label{BNO080__Xmega__Lib_8h_a9c9dfa832505273c4f24b493c2b847fa}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_MAG@{CALIBRATE\_MAG}}
+\index{CALIBRATE\_MAG@{CALIBRATE\_MAG}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_MAG}{CALIBRATE\_MAG}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+M\+AG~2}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_af45d16534dcc29b8db43dfa73842d8da}\label{BNO080__Xmega__Lib_8h_af45d16534dcc29b8db43dfa73842d8da}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_PLANAR\_ACCEL@{CALIBRATE\_PLANAR\_ACCEL}}
+\index{CALIBRATE\_PLANAR\_ACCEL@{CALIBRATE\_PLANAR\_ACCEL}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_PLANAR\_ACCEL}{CALIBRATE\_PLANAR\_ACCEL}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+P\+L\+A\+N\+A\+R\+\_\+\+A\+C\+C\+EL~3}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a68b86435799919112ddd9a60f502a58b}\label{BNO080__Xmega__Lib_8h_a68b86435799919112ddd9a60f502a58b}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CALIBRATE\_STOP@{CALIBRATE\_STOP}}
+\index{CALIBRATE\_STOP@{CALIBRATE\_STOP}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CALIBRATE\_STOP}{CALIBRATE\_STOP}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+S\+T\+OP~5}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a70adad31d9742d7c7e259edee4d39172}\label{BNO080__Xmega__Lib_8h_a70adad31d9742d7c7e259edee4d39172}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_COMMAND@{CHANNEL\_COMMAND}}
+\index{CHANNEL\_COMMAND@{CHANNEL\_COMMAND}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_COMMAND}{CHANNEL\_COMMAND}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+M\+M\+A\+ND~0}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aaaf3e4e2899b53efa937ba9b191af4e4}\label{BNO080__Xmega__Lib_8h_aaaf3e4e2899b53efa937ba9b191af4e4}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_CONTROL@{CHANNEL\_CONTROL}}
+\index{CHANNEL\_CONTROL@{CHANNEL\_CONTROL}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_CONTROL}{CHANNEL\_CONTROL}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+OL~2}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_ab9ce01d8030e77942b6be6b7f62fb767}\label{BNO080__Xmega__Lib_8h_ab9ce01d8030e77942b6be6b7f62fb767}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_EXECUTABLE@{CHANNEL\_EXECUTABLE}}
+\index{CHANNEL\_EXECUTABLE@{CHANNEL\_EXECUTABLE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_EXECUTABLE}{CHANNEL\_EXECUTABLE}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+E\+X\+E\+C\+U\+T\+A\+B\+LE~1}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a7458d654ab9cdf099261b584f2b84128}\label{BNO080__Xmega__Lib_8h_a7458d654ab9cdf099261b584f2b84128}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_GYRO@{CHANNEL\_GYRO}}
+\index{CHANNEL\_GYRO@{CHANNEL\_GYRO}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_GYRO}{CHANNEL\_GYRO}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+G\+Y\+RO~5}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aa36d9a224dd63eef7dbc458db5689b05}\label{BNO080__Xmega__Lib_8h_aa36d9a224dd63eef7dbc458db5689b05}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_REPORTS@{CHANNEL\_REPORTS}}
+\index{CHANNEL\_REPORTS@{CHANNEL\_REPORTS}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_REPORTS}{CHANNEL\_REPORTS}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+R\+E\+P\+O\+R\+TS~3}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a8e54131248228626e10e49608bbf9911}\label{BNO080__Xmega__Lib_8h_a8e54131248228626e10e49608bbf9911}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!CHANNEL\_WAKE\_REPORTS@{CHANNEL\_WAKE\_REPORTS}}
+\index{CHANNEL\_WAKE\_REPORTS@{CHANNEL\_WAKE\_REPORTS}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{CHANNEL\_WAKE\_REPORTS}{CHANNEL\_WAKE\_REPORTS}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+\+W\+A\+K\+E\+\_\+\+R\+E\+P\+O\+R\+TS~4}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a0cc14dd9340d970f05e3a39b3c7d1e34}\label{BNO080__Xmega__Lib_8h_a0cc14dd9340d970f05e3a39b3c7d1e34}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_CLEAR\_DCD@{COMMAND\_CLEAR\_DCD}}
+\index{COMMAND\_CLEAR\_DCD@{COMMAND\_CLEAR\_DCD}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_CLEAR\_DCD}{COMMAND\_CLEAR\_DCD}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R\+\_\+\+D\+CD~11}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a361f2e25a5da7e27939139056bac405a}\label{BNO080__Xmega__Lib_8h_a361f2e25a5da7e27939139056bac405a}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_COUNTER@{COMMAND\_COUNTER}}
+\index{COMMAND\_COUNTER@{COMMAND\_COUNTER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_COUNTER}{COMMAND\_COUNTER}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+O\+U\+N\+T\+ER~2}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a7876f0a534ece48f210afcec96e243db}\label{BNO080__Xmega__Lib_8h_a7876f0a534ece48f210afcec96e243db}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_DCD@{COMMAND\_DCD}}
+\index{COMMAND\_DCD@{COMMAND\_DCD}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_DCD}{COMMAND\_DCD}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+CD~6}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a98183d708468ecf64e773ae87b30fb1c}\label{BNO080__Xmega__Lib_8h_a98183d708468ecf64e773ae87b30fb1c}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_DCD\_PERIOD\_SAVE@{COMMAND\_DCD\_PERIOD\_SAVE}}
+\index{COMMAND\_DCD\_PERIOD\_SAVE@{COMMAND\_DCD\_PERIOD\_SAVE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_DCD\_PERIOD\_SAVE}{COMMAND\_DCD\_PERIOD\_SAVE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+C\+D\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+S\+A\+VE~9}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a7b6a4e2b8711d1ea1dcb5e78cb74b187}\label{BNO080__Xmega__Lib_8h_a7b6a4e2b8711d1ea1dcb5e78cb74b187}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_ERRORS@{COMMAND\_ERRORS}}
+\index{COMMAND\_ERRORS@{COMMAND\_ERRORS}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_ERRORS}{COMMAND\_ERRORS}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+R\+R\+O\+RS~1}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a5ddd2003fd5f044411cf7cc64e0c91d2}\label{BNO080__Xmega__Lib_8h_a5ddd2003fd5f044411cf7cc64e0c91d2}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_INITIALIZE@{COMMAND\_INITIALIZE}}
+\index{COMMAND\_INITIALIZE@{COMMAND\_INITIALIZE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_INITIALIZE}{COMMAND\_INITIALIZE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+ZE~4}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aab17d20d03850bd332750d160eda0fb8}\label{BNO080__Xmega__Lib_8h_aab17d20d03850bd332750d160eda0fb8}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_ME\_CALIBRATE@{COMMAND\_ME\_CALIBRATE}}
+\index{COMMAND\_ME\_CALIBRATE@{COMMAND\_ME\_CALIBRATE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_ME\_CALIBRATE}{COMMAND\_ME\_CALIBRATE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+TE~7}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_af12e5122c8920c9c036d22330f0f76cc}\label{BNO080__Xmega__Lib_8h_af12e5122c8920c9c036d22330f0f76cc}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_OSCILLATOR@{COMMAND\_OSCILLATOR}}
+\index{COMMAND\_OSCILLATOR@{COMMAND\_OSCILLATOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_OSCILLATOR}{COMMAND\_OSCILLATOR}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+O\+S\+C\+I\+L\+L\+A\+T\+OR~10}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a1daf33c991611231a605b94526d88e76}\label{BNO080__Xmega__Lib_8h_a1daf33c991611231a605b94526d88e76}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!COMMAND\_TARE@{COMMAND\_TARE}}
+\index{COMMAND\_TARE@{COMMAND\_TARE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{COMMAND\_TARE}{COMMAND\_TARE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+A\+RE~3}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a20f1f719ae8e641a6f63d739f3aa3718}\label{BNO080__Xmega__Lib_8h_a20f1f719ae8e641a6f63d739f3aa3718}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!FRS\_RECORDID\_ACCELEROMETER@{FRS\_RECORDID\_ACCELEROMETER}}
+\index{FRS\_RECORDID\_ACCELEROMETER@{FRS\_RECORDID\_ACCELEROMETER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{FRS\_RECORDID\_ACCELEROMETER}{FRS\_RECORDID\_ACCELEROMETER}}
+{\footnotesize\ttfamily \#define F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER~0x\+E302}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a773c0d189520f9eef940c9536efc6feb}\label{BNO080__Xmega__Lib_8h_a773c0d189520f9eef940c9536efc6feb}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!FRS\_RECORDID\_GYROSCOPE\_CALIBRATED@{FRS\_RECORDID\_GYROSCOPE\_CALIBRATED}}
+\index{FRS\_RECORDID\_GYROSCOPE\_CALIBRATED@{FRS\_RECORDID\_GYROSCOPE\_CALIBRATED}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{FRS\_RECORDID\_GYROSCOPE\_CALIBRATED}{FRS\_RECORDID\_GYROSCOPE\_CALIBRATED}}
+{\footnotesize\ttfamily \#define F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED~0x\+E306}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a16f6656ff3952d2eaba9d770d8ad2d9b}\label{BNO080__Xmega__Lib_8h_a16f6656ff3952d2eaba9d770d8ad2d9b}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED@{FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED}}
+\index{FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED@{FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED}{FRS\_RECORDID\_MAGNETIC\_FIELD\_CALIBRATED}}
+{\footnotesize\ttfamily \#define F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED~0x\+E309}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a3247afd7df0287a44853f0f160c59bd1}\label{BNO080__Xmega__Lib_8h_a3247afd7df0287a44853f0f160c59bd1}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!FRS\_RECORDID\_ROTATION\_VECTOR@{FRS\_RECORDID\_ROTATION\_VECTOR}}
+\index{FRS\_RECORDID\_ROTATION\_VECTOR@{FRS\_RECORDID\_ROTATION\_VECTOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{FRS\_RECORDID\_ROTATION\_VECTOR}{FRS\_RECORDID\_ROTATION\_VECTOR}}
+{\footnotesize\ttfamily \#define F\+R\+S\+\_\+\+R\+E\+C\+O\+R\+D\+I\+D\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR~0x\+E30B}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aab040ced3ff06bdd71655d55a5f8db14}\label{BNO080__Xmega__Lib_8h_aab040ced3ff06bdd71655d55a5f8db14}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}}
+\index{I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{I2C\_BUFFER\_LENGTH}{I2C\_BUFFER\_LENGTH}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH~25}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aa6cd4fc5568a0b0fb40391a2fea3b69e}\label{BNO080__Xmega__Lib_8h_aa6cd4fc5568a0b0fb40391a2fea3b69e}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!MAX\_METADATA\_SIZE@{MAX\_METADATA\_SIZE}}
+\index{MAX\_METADATA\_SIZE@{MAX\_METADATA\_SIZE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{MAX\_METADATA\_SIZE}{MAX\_METADATA\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+S\+I\+ZE~9}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a879456c3b8e2853f7044d764e9c180d4}\label{BNO080__Xmega__Lib_8h_a879456c3b8e2853f7044d764e9c180d4}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!MAX\_PACKET\_SIZE@{MAX\_PACKET\_SIZE}}
+\index{MAX\_PACKET\_SIZE@{MAX\_PACKET\_SIZE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{MAX\_PACKET\_SIZE}{MAX\_PACKET\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE~128}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a09b4744152d1b660fd4890d7e6bf0441}\label{BNO080__Xmega__Lib_8h_a09b4744152d1b660fd4890d7e6bf0441}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_ACCELEROMETER@{SENSOR\_REPORTID\_ACCELEROMETER}}
+\index{SENSOR\_REPORTID\_ACCELEROMETER@{SENSOR\_REPORTID\_ACCELEROMETER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_ACCELEROMETER}{SENSOR\_REPORTID\_ACCELEROMETER}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER~0x01}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a380de286d28fdffc46c0e46fb7c38e1c}\label{BNO080__Xmega__Lib_8h_a380de286d28fdffc46c0e46fb7c38e1c}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR}}
+\index{SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR}{SENSOR\_REPORTID\_GAME\_ROTATION\_VECTOR}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+A\+M\+E\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR~0x08}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_adc1f0507cfa1f9e4af977214469a0c8c}\label{BNO080__Xmega__Lib_8h_adc1f0507cfa1f9e4af977214469a0c8c}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR}}
+\index{SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR}{SENSOR\_REPORTID\_GEOMAGNETIC\_ROTATION\_VECTOR}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+E\+O\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR~0x09}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a792333e8edabd5a2e0226e591f26c866}\label{BNO080__Xmega__Lib_8h_a792333e8edabd5a2e0226e591f26c866}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_GRAVITY@{SENSOR\_REPORTID\_GRAVITY}}
+\index{SENSOR\_REPORTID\_GRAVITY@{SENSOR\_REPORTID\_GRAVITY}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_GRAVITY}{SENSOR\_REPORTID\_GRAVITY}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+R\+A\+V\+I\+TY~0x06}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a50ce10b6e19566d6392d233a3bd65e65}\label{BNO080__Xmega__Lib_8h_a50ce10b6e19566d6392d233a3bd65e65}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_GYROSCOPE@{SENSOR\_REPORTID\_GYROSCOPE}}
+\index{SENSOR\_REPORTID\_GYROSCOPE@{SENSOR\_REPORTID\_GYROSCOPE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_GYROSCOPE}{SENSOR\_REPORTID\_GYROSCOPE}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE~0x02}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a4f14c584ded02a79614ff9147a047c92}\label{BNO080__Xmega__Lib_8h_a4f14c584ded02a79614ff9147a047c92}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_LINEAR\_ACCELERATION@{SENSOR\_REPORTID\_LINEAR\_ACCELERATION}}
+\index{SENSOR\_REPORTID\_LINEAR\_ACCELERATION@{SENSOR\_REPORTID\_LINEAR\_ACCELERATION}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_LINEAR\_ACCELERATION}{SENSOR\_REPORTID\_LINEAR\_ACCELERATION}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON~0x04}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a56280e66ead058e104abba5cc8ec833d}\label{BNO080__Xmega__Lib_8h_a56280e66ead058e104abba5cc8ec833d}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_MAGNETIC\_FIELD@{SENSOR\_REPORTID\_MAGNETIC\_FIELD}}
+\index{SENSOR\_REPORTID\_MAGNETIC\_FIELD@{SENSOR\_REPORTID\_MAGNETIC\_FIELD}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_MAGNETIC\_FIELD}{SENSOR\_REPORTID\_MAGNETIC\_FIELD}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+M\+A\+G\+N\+E\+T\+I\+C\+\_\+\+F\+I\+E\+LD~0x03}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aded67cfe6df6776e6421e32237502ec1}\label{BNO080__Xmega__Lib_8h_aded67cfe6df6776e6421e32237502ec1}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER@{SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER}}
+\index{SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER@{SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER}{SENSOR\_REPORTID\_PERSONAL\_ACTIVITY\_CLASSIFIER}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+P\+E\+R\+S\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+ER~0x1E}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a9e0bbd70afccd248e490afeb75acce84}\label{BNO080__Xmega__Lib_8h_a9e0bbd70afccd248e490afeb75acce84}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_ROTATION\_VECTOR}}
+\index{SENSOR\_REPORTID\_ROTATION\_VECTOR@{SENSOR\_REPORTID\_ROTATION\_VECTOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_ROTATION\_VECTOR}{SENSOR\_REPORTID\_ROTATION\_VECTOR}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+V\+E\+C\+T\+OR~0x05}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_adb6bc6abf76110d5cbcc66d22e6a1b95}\label{BNO080__Xmega__Lib_8h_adb6bc6abf76110d5cbcc66d22e6a1b95}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_STABILITY\_CLASSIFIER@{SENSOR\_REPORTID\_STABILITY\_CLASSIFIER}}
+\index{SENSOR\_REPORTID\_STABILITY\_CLASSIFIER@{SENSOR\_REPORTID\_STABILITY\_CLASSIFIER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_STABILITY\_CLASSIFIER}{SENSOR\_REPORTID\_STABILITY\_CLASSIFIER}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+S\+T\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+ER~0x13}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_abf209ac6e007b2abf9ef417109ff6345}\label{BNO080__Xmega__Lib_8h_abf209ac6e007b2abf9ef417109ff6345}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_STEP\_COUNTER@{SENSOR\_REPORTID\_STEP\_COUNTER}}
+\index{SENSOR\_REPORTID\_STEP\_COUNTER@{SENSOR\_REPORTID\_STEP\_COUNTER}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_STEP\_COUNTER}{SENSOR\_REPORTID\_STEP\_COUNTER}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+S\+T\+E\+P\+\_\+\+C\+O\+U\+N\+T\+ER~0x11}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a8487c1e8abdd04acc638eefc1529f73b}\label{BNO080__Xmega__Lib_8h_a8487c1e8abdd04acc638eefc1529f73b}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SENSOR\_REPORTID\_TAP\_DETECTOR@{SENSOR\_REPORTID\_TAP\_DETECTOR}}
+\index{SENSOR\_REPORTID\_TAP\_DETECTOR@{SENSOR\_REPORTID\_TAP\_DETECTOR}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SENSOR\_REPORTID\_TAP\_DETECTOR}{SENSOR\_REPORTID\_TAP\_DETECTOR}}
+{\footnotesize\ttfamily \#define S\+E\+N\+S\+O\+R\+\_\+\+R\+E\+P\+O\+R\+T\+I\+D\+\_\+\+T\+A\+P\+\_\+\+D\+E\+T\+E\+C\+T\+OR~0x10}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_aa80b64798e7ac4c96fe314006a5b99e9}\label{BNO080__Xmega__Lib_8h_aa80b64798e7ac4c96fe314006a5b99e9}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_HEADER\_SIZE@{SHTP\_HEADER\_SIZE}}
+\index{SHTP\_HEADER\_SIZE@{SHTP\_HEADER\_SIZE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_HEADER\_SIZE}{SHTP\_HEADER\_SIZE}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE~4}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a5a4c96c04cc37f684a86bfd8a13b28b2}\label{BNO080__Xmega__Lib_8h_a5a4c96c04cc37f684a86bfd8a13b28b2}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_BASE\_TIMESTAMP@{SHTP\_REPORT\_BASE\_TIMESTAMP}}
+\index{SHTP\_REPORT\_BASE\_TIMESTAMP@{SHTP\_REPORT\_BASE\_TIMESTAMP}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_BASE\_TIMESTAMP}{SHTP\_REPORT\_BASE\_TIMESTAMP}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP~0x\+FB}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a712010ee4857ccba8ee5ed9205b6ae20}\label{BNO080__Xmega__Lib_8h_a712010ee4857ccba8ee5ed9205b6ae20}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_COMMAND\_REQUEST@{SHTP\_REPORT\_COMMAND\_REQUEST}}
+\index{SHTP\_REPORT\_COMMAND\_REQUEST@{SHTP\_REPORT\_COMMAND\_REQUEST}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_COMMAND\_REQUEST}{SHTP\_REPORT\_COMMAND\_REQUEST}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+Q\+U\+E\+ST~0x\+F2}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a83dafc26b6e579e8018a2c16937857ab}\label{BNO080__Xmega__Lib_8h_a83dafc26b6e579e8018a2c16937857ab}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_COMMAND\_RESPONSE@{SHTP\_REPORT\_COMMAND\_RESPONSE}}
+\index{SHTP\_REPORT\_COMMAND\_RESPONSE@{SHTP\_REPORT\_COMMAND\_RESPONSE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_COMMAND\_RESPONSE}{SHTP\_REPORT\_COMMAND\_RESPONSE}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE~0x\+F1}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_ab985095047ff984572bb7178104c7b58}\label{BNO080__Xmega__Lib_8h_ab985095047ff984572bb7178104c7b58}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_FRS\_READ\_REQUEST@{SHTP\_REPORT\_FRS\_READ\_REQUEST}}
+\index{SHTP\_REPORT\_FRS\_READ\_REQUEST@{SHTP\_REPORT\_FRS\_READ\_REQUEST}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_FRS\_READ\_REQUEST}{SHTP\_REPORT\_FRS\_READ\_REQUEST}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+F\+R\+S\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST~0x\+F4}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a83ce806fd455b8144a141cde9517c9cc}\label{BNO080__Xmega__Lib_8h_a83ce806fd455b8144a141cde9517c9cc}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_FRS\_READ\_RESPONSE@{SHTP\_REPORT\_FRS\_READ\_RESPONSE}}
+\index{SHTP\_REPORT\_FRS\_READ\_RESPONSE@{SHTP\_REPORT\_FRS\_READ\_RESPONSE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_FRS\_READ\_RESPONSE}{SHTP\_REPORT\_FRS\_READ\_RESPONSE}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+F\+R\+S\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE~0x\+F3}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a6d7a876cde7121e3ae0eb00cfab250b2}\label{BNO080__Xmega__Lib_8h_a6d7a876cde7121e3ae0eb00cfab250b2}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_PRODUCT\_ID\_REQUEST@{SHTP\_REPORT\_PRODUCT\_ID\_REQUEST}}
+\index{SHTP\_REPORT\_PRODUCT\_ID\_REQUEST@{SHTP\_REPORT\_PRODUCT\_ID\_REQUEST}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_PRODUCT\_ID\_REQUEST}{SHTP\_REPORT\_PRODUCT\_ID\_REQUEST}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+I\+D\+\_\+\+R\+E\+Q\+U\+E\+ST~0x\+F9}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a7dc2542911610758df8edc4e54b7e440}\label{BNO080__Xmega__Lib_8h_a7dc2542911610758df8edc4e54b7e440}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE@{SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE}}
+\index{SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE@{SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE}{SHTP\_REPORT\_PRODUCT\_ID\_RESPONSE}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+I\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE~0x\+F8}
+
+\mbox{\Hypertarget{BNO080__Xmega__Lib_8h_a8e7664b3054c74b2df9531eee21266fb}\label{BNO080__Xmega__Lib_8h_a8e7664b3054c74b2df9531eee21266fb}} 
+\index{BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}!SHTP\_REPORT\_SET\_FEATURE\_COMMAND@{SHTP\_REPORT\_SET\_FEATURE\_COMMAND}}
+\index{SHTP\_REPORT\_SET\_FEATURE\_COMMAND@{SHTP\_REPORT\_SET\_FEATURE\_COMMAND}!BNO080\_Xmega\_Lib.h@{BNO080\_Xmega\_Lib.h}}
+\subsubsection{\texorpdfstring{SHTP\_REPORT\_SET\_FEATURE\_COMMAND}{SHTP\_REPORT\_SET\_FEATURE\_COMMAND}}
+{\footnotesize\ttfamily \#define S\+H\+T\+P\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+C\+O\+M\+M\+A\+ND~0x\+FD}
+

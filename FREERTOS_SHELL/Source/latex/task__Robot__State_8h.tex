@@ -1,0 +1,81 @@
+\hypertarget{task__Robot__State_8h}{}\section{task\+\_\+\+Robot\+\_\+\+State.\+h File Reference}
+\label{task__Robot__State_8h}\index{task\_Robot\_State.h@{task\_Robot\_State.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rs232int.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time\+\_\+stamp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+text\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+shared\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qdec\+\_\+driver.\+h\char`\"{}}\newline
+Include dependency graph for task\+\_\+\+Robot\+\_\+\+State.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{task__Robot__State_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{task__Robot__State_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtask__Robot__State}{task\+\_\+\+Robot\+\_\+\+State}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{task__Robot__State_8h_aa33cade46cdcb9e685647f8f6806b494}{T\+I\+C\+K\+S\+P\+E\+R\+I\+N\+CH}}~77
+\item 
+\#define \mbox{\hyperlink{task__Robot__State_8h_a1c802aa37743f2eb1940c838d95583f7}{D\+E\+L\+A\+Y\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~5
+\item 
+\#define \mbox{\hyperlink{task__Robot__State_8h_af7cdd1017a0d0da8ab0c686153c6f72e}{W\+H\+E\+E\+L\+B\+A\+S\+E\+\_\+\+I\+N\+CH}}~10
+\item 
+\#define \mbox{\hyperlink{task__Robot__State_8h_aaefab79288a970fd72cf9e5e5502f477}{W\+H\+E\+E\+L\+B\+A\+S\+E\+\_\+\+T\+I\+C\+KS}}~531
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains header stuff for a 2wd robot with caster wheel encoder read/state estimator.
+
+Revisions\+: \begin{DoxyItemize}
+\item 12-\/05-\/2018 R\+GD -\/ Created task Robot State.\end{DoxyItemize}
+License\+: This file is copyright 2018 by RG Dunn and released under the Lesser G\+NU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{task__Robot__State_8h_a1c802aa37743f2eb1940c838d95583f7}\label{task__Robot__State_8h_a1c802aa37743f2eb1940c838d95583f7}} 
+\index{task\_Robot\_State.h@{task\_Robot\_State.h}!DELAYINTERVAL\_MS@{DELAYINTERVAL\_MS}}
+\index{DELAYINTERVAL\_MS@{DELAYINTERVAL\_MS}!task\_Robot\_State.h@{task\_Robot\_State.h}}
+\subsubsection{\texorpdfstring{DELAYINTERVAL\_MS}{DELAYINTERVAL\_MS}}
+{\footnotesize\ttfamily \#define D\+E\+L\+A\+Y\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS~5}
+
+\mbox{\Hypertarget{task__Robot__State_8h_aa33cade46cdcb9e685647f8f6806b494}\label{task__Robot__State_8h_aa33cade46cdcb9e685647f8f6806b494}} 
+\index{task\_Robot\_State.h@{task\_Robot\_State.h}!TICKSPERINCH@{TICKSPERINCH}}
+\index{TICKSPERINCH@{TICKSPERINCH}!task\_Robot\_State.h@{task\_Robot\_State.h}}
+\subsubsection{\texorpdfstring{TICKSPERINCH}{TICKSPERINCH}}
+{\footnotesize\ttfamily \#define T\+I\+C\+K\+S\+P\+E\+R\+I\+N\+CH~77}
+
+\mbox{\Hypertarget{task__Robot__State_8h_af7cdd1017a0d0da8ab0c686153c6f72e}\label{task__Robot__State_8h_af7cdd1017a0d0da8ab0c686153c6f72e}} 
+\index{task\_Robot\_State.h@{task\_Robot\_State.h}!WHEELBASE\_INCH@{WHEELBASE\_INCH}}
+\index{WHEELBASE\_INCH@{WHEELBASE\_INCH}!task\_Robot\_State.h@{task\_Robot\_State.h}}
+\subsubsection{\texorpdfstring{WHEELBASE\_INCH}{WHEELBASE\_INCH}}
+{\footnotesize\ttfamily \#define W\+H\+E\+E\+L\+B\+A\+S\+E\+\_\+\+I\+N\+CH~10}
+
+\mbox{\Hypertarget{task__Robot__State_8h_aaefab79288a970fd72cf9e5e5502f477}\label{task__Robot__State_8h_aaefab79288a970fd72cf9e5e5502f477}} 
+\index{task\_Robot\_State.h@{task\_Robot\_State.h}!WHEELBASE\_TICKS@{WHEELBASE\_TICKS}}
+\index{WHEELBASE\_TICKS@{WHEELBASE\_TICKS}!task\_Robot\_State.h@{task\_Robot\_State.h}}
+\subsubsection{\texorpdfstring{WHEELBASE\_TICKS}{WHEELBASE\_TICKS}}
+{\footnotesize\ttfamily \#define W\+H\+E\+E\+L\+B\+A\+S\+E\+\_\+\+T\+I\+C\+KS~531}
+

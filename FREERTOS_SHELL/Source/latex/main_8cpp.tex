@@ -1,0 +1,57 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/wdt.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}croutine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rs232int.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time\+\_\+stamp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+text\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}frt\+\_\+shared\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xmega\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task\+\_\+user.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task\+\_\+\+L\+E\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task\+\_\+motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task\+\_\+\+Robot\+\_\+\+State.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task\+\_\+diag.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+frt\+\_\+text\+\_\+queue \mbox{\hyperlink{main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}{print\+\_\+ser\+\_\+queue}} (32, N\+U\+LL, 10)
+\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+The main function sets up the R\+T\+OS. Some test tasks are created. Then the scheduler is started up; the scheduler runs until power is turned off or there\textquotesingle{}s a reset. \begin{DoxyReturn}{Returns}
+This is a real-\/time microcontroller program which doesn\textquotesingle{}t return. Ever. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}\label{main_8cpp_a4c623cb3c8a60e67138367480c1ee0d2}} 
+\index{main.cpp@{main.cpp}!print\_ser\_queue@{print\_ser\_queue}}
+\index{print\_ser\_queue@{print\_ser\_queue}!main.cpp@{main.cpp}}
+\subsubsection{\texorpdfstring{print\_ser\_queue()}{print\_ser\_queue()}}
+{\footnotesize\ttfamily frt\+\_\+text\+\_\+queue print\+\_\+ser\+\_\+queue (\begin{DoxyParamCaption}\item[{32}]{,  }\item[{N\+U\+LL}]{,  }\item[{10}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,392 @@
+\hypertarget{classmotorDriver}{}\section{motor\+Driver Class Reference}
+\label{classmotorDriver}\index{motorDriver@{motorDriver}}
+
+
+A P\+ID closed-\/loop motor controller class.  
+
+
+
+
+{\ttfamily \#include $<$motor\+Driver.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmotorDriver_accdc35f52d3eba2302b2abb40566e271}{motor\+Driver}} (char, emstream $\ast$ser\+\_\+dev)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classmotorDriver}{motor\+Driver}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmotorDriver_ab246686cb5fa83bcbe5d823b1fe10916}{set\+\_\+k\+\_\+l}} (int16\+\_\+t kp\+\_\+l\+\_\+in, int16\+\_\+t ki\+\_\+l\+\_\+in, int16\+\_\+t kd\+\_\+l\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a6c33038958e390dcf98d2f72b6341491}{set\+\_\+k\+\_\+a}} (int16\+\_\+t kp\+\_\+a\+\_\+in, int16\+\_\+t ki\+\_\+a\+\_\+in, int16\+\_\+t kd\+\_\+a\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_ad226c2718cab94496bf293434902d8ac}{set\+\_\+pwm\+\_\+scaling}} (int16\+\_\+t pwm\+\_\+scale\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_aa7436e1db41a973893e57d03842f3886}{set\+\_\+pwm\+\_\+lim}} (int16\+\_\+t pwm\+\_\+lim\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a88cb40b067f63fe0c44b444352909246}{set\+\_\+pwm\+\_\+lim\+\_\+linear}} (int16\+\_\+t pwm\+\_\+lim\+\_\+linear\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_acc7dca0d73b3603ba74b74852bf14d18}{set\+\_\+esum\+\_\+l\+\_\+lim}} (int16\+\_\+t esum\+\_\+l\+\_\+lim\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_af6a5a35004ac1a9b7b3c928e75b04c99}{set\+\_\+esum\+\_\+a\+\_\+lim}} (int16\+\_\+t esum\+\_\+a\+\_\+lim\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a574c77f9c8b357f0fba8f1d477660c8c}{set\+\_\+setpoint\+\_\+l}} (int16\+\_\+t setpoint\+\_\+l\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a6e71895792955acca1ed81eca952d767}{set\+\_\+setpoint\+\_\+a}} (int16\+\_\+t setpoint\+\_\+l\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a3aeee35e6c70082133a9e45299742e37}{set\+\_\+position}} (int16\+\_\+t position\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_aed116408f7a7498a96a69dc5b14930aa}{set\+\_\+angle}} (int16\+\_\+t angle\+\_\+in)
+\item 
+void \mbox{\hyperlink{classmotorDriver_a32a97045e477c63f1f67d5e398b7e8fd}{zero\+\_\+esum\+\_\+l}} (void)
+\begin{DoxyCompactList}\small\item\em Resets the linear integral error sum to zero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmotorDriver_ae5ac04723b2ceac14fe4c12f9f163cd0}{zero\+\_\+esum\+\_\+a}} (void)
+\begin{DoxyCompactList}\small\item\em Resets the angular integral error sum to zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdiagnostic}{diagnostic}} \mbox{\hyperlink{classmotorDriver_a49437362ce00be4bd428d4e7e46fd477}{run}} (bool en\+\_\+p, bool en\+\_\+i, bool en\+\_\+d, bool op\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct pwm\+\_\+config \mbox{\hyperlink{classmotorDriver_a9522f9112a5281698efee54ec4d23a8d}{pwm\+\_\+1}}
+\item 
+struct pwm\+\_\+config \mbox{\hyperlink{classmotorDriver_a7b86ba5d54e991cbc79cf936f5c225f2}{pwm\+\_\+2}}
+\item 
+emstream $\ast$ \mbox{\hyperlink{classmotorDriver_a30b31378644a7e2ae943f953165adcf7}{ser\+\_\+out}}
+\item 
+char \mbox{\hyperlink{classmotorDriver_a8f014e8a6c08db461ea445b5c827c247}{motor\+\_\+\+ID}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a4e1437c476209d17f804e7ebe6a82414}{kp\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a6f35f045ff1b9ad15a7e25fb06423143}{ki\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a4c7c759295dc91ddfbd95d7f68251613}{kd\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a6c6003ba49477ac2fa07a997af31db3a}{kp\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_acac05ca0ce9a687efb3d7469cc378e46}{ki\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_aab85058af216f925e9bffc78ed89bc0a}{kd\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_ab25c45eb1c877d431f375f9584f7842d}{pwm\+\_\+scale}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_ab6f8668c8137d2a8a4eb51e747466465}{setpoint\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_abbec1c2a55941af5ed8837c12ed73529}{position}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_adac3e08603f6946acf32d764eddc0105}{angle}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_adecf277f71f6f214bc6b920d113a05ee}{setpoint\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_ae38f3809514145607d1d79e7513517e5}{motor\+\_\+dir}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a1167aa02f79f3ce85a38138b51e11c02}{error\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_aaa3f3b3f21f2b4be049289a28ee49c44}{esum\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a5685e659a36278ead61528aaa5ae7df4}{eder\+\_\+l}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a5e3b5660f0764a6751b533893feb6b7b}{error\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a8d327e1eed5b8eedf1b2289a675890f3}{esum\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a3392381240d368f578b6f801984ac074}{eder\+\_\+a}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a54e6e6cddb7e7ef584cbe58449e08650}{pwm\+\_\+lim}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a842b7fc2c8401ae9a2919982c746da6d}{pwm\+\_\+lim\+\_\+linear}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a43969a01dd52d129d84243585dc996a9}{esum\+\_\+l\+\_\+lim}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{classmotorDriver_a149914d07b894ca8201e6e9954862072}{esum\+\_\+a\+\_\+lim}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A P\+ID closed-\/loop motor controller class. 
+
+This class allows for closed-\/loop PI control of a DC motor through a motor driver chip. Class needs to be given pins for motor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmotorDriver_accdc35f52d3eba2302b2abb40566e271}\label{classmotorDriver_accdc35f52d3eba2302b2abb40566e271}} 
+\index{motorDriver@{motorDriver}!motorDriver@{motorDriver}}
+\index{motorDriver@{motorDriver}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{motorDriver()}{motorDriver()}}
+{\footnotesize\ttfamily motor\+Driver\+::motor\+Driver (\begin{DoxyParamCaption}\item[{char}]{motor,  }\item[{emstream $\ast$}]{ser\+\_\+dev }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{classmotorDriver}{motor\+Driver}} object. 
+
+This constructor creates a \mbox{\hyperlink{classmotorDriver}{motor\+Driver}} object with the input enable and P\+WM pin locations. The constructor initializes all other variables at zero. 
+\begin{DoxyParams}{Parameters}
+{\em motor} & The motor that this object corresponds to. Either \textquotesingle{}1\textquotesingle{} or \textquotesingle{}2\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmotorDriver_a49437362ce00be4bd428d4e7e46fd477}\label{classmotorDriver_a49437362ce00be4bd428d4e7e46fd477}} 
+\index{motorDriver@{motorDriver}!run@{run}}
+\index{run@{run}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdiagnostic}{diagnostic}} motor\+Driver\+::run (\begin{DoxyParamCaption}\item[{bool}]{en\+\_\+p = {\ttfamily 0},  }\item[{bool}]{en\+\_\+i = {\ttfamily 0},  }\item[{bool}]{en\+\_\+d = {\ttfamily 0},  }\item[{bool}]{op\+\_\+type = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_aed116408f7a7498a96a69dc5b14930aa}\label{classmotorDriver_aed116408f7a7498a96a69dc5b14930aa}} 
+\index{motorDriver@{motorDriver}!set\_angle@{set\_angle}}
+\index{set\_angle@{set\_angle}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_angle()}{set\_angle()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+angle (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{angle\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_af6a5a35004ac1a9b7b3c928e75b04c99}\label{classmotorDriver_af6a5a35004ac1a9b7b3c928e75b04c99}} 
+\index{motorDriver@{motorDriver}!set\_esum\_a\_lim@{set\_esum\_a\_lim}}
+\index{set\_esum\_a\_lim@{set\_esum\_a\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_esum\_a\_lim()}{set\_esum\_a\_lim()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+esum\+\_\+a\+\_\+lim (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{esum\+\_\+a\+\_\+lim\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_acc7dca0d73b3603ba74b74852bf14d18}\label{classmotorDriver_acc7dca0d73b3603ba74b74852bf14d18}} 
+\index{motorDriver@{motorDriver}!set\_esum\_l\_lim@{set\_esum\_l\_lim}}
+\index{set\_esum\_l\_lim@{set\_esum\_l\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_esum\_l\_lim()}{set\_esum\_l\_lim()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+esum\+\_\+l\+\_\+lim (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{esum\+\_\+l\+\_\+lim\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_a6c33038958e390dcf98d2f72b6341491}\label{classmotorDriver_a6c33038958e390dcf98d2f72b6341491}} 
+\index{motorDriver@{motorDriver}!set\_k\_a@{set\_k\_a}}
+\index{set\_k\_a@{set\_k\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_k\_a()}{set\_k\_a()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+k\+\_\+a (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{kp\+\_\+a\+\_\+in,  }\item[{int16\+\_\+t}]{ki\+\_\+a\+\_\+in,  }\item[{int16\+\_\+t}]{kd\+\_\+a\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_ab246686cb5fa83bcbe5d823b1fe10916}\label{classmotorDriver_ab246686cb5fa83bcbe5d823b1fe10916}} 
+\index{motorDriver@{motorDriver}!set\_k\_l@{set\_k\_l}}
+\index{set\_k\_l@{set\_k\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_k\_l()}{set\_k\_l()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+k\+\_\+l (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{kp\+\_\+l\+\_\+in,  }\item[{int16\+\_\+t}]{ki\+\_\+l\+\_\+in,  }\item[{int16\+\_\+t}]{kd\+\_\+l\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_a3aeee35e6c70082133a9e45299742e37}\label{classmotorDriver_a3aeee35e6c70082133a9e45299742e37}} 
+\index{motorDriver@{motorDriver}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{position\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_aa7436e1db41a973893e57d03842f3886}\label{classmotorDriver_aa7436e1db41a973893e57d03842f3886}} 
+\index{motorDriver@{motorDriver}!set\_pwm\_lim@{set\_pwm\_lim}}
+\index{set\_pwm\_lim@{set\_pwm\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_pwm\_lim()}{set\_pwm\_lim()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+pwm\+\_\+lim (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{pwm\+\_\+lim\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_a88cb40b067f63fe0c44b444352909246}\label{classmotorDriver_a88cb40b067f63fe0c44b444352909246}} 
+\index{motorDriver@{motorDriver}!set\_pwm\_lim\_linear@{set\_pwm\_lim\_linear}}
+\index{set\_pwm\_lim\_linear@{set\_pwm\_lim\_linear}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_pwm\_lim\_linear()}{set\_pwm\_lim\_linear()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+pwm\+\_\+lim\+\_\+linear (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{pwm\+\_\+lim\+\_\+linear\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_ad226c2718cab94496bf293434902d8ac}\label{classmotorDriver_ad226c2718cab94496bf293434902d8ac}} 
+\index{motorDriver@{motorDriver}!set\_pwm\_scaling@{set\_pwm\_scaling}}
+\index{set\_pwm\_scaling@{set\_pwm\_scaling}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_pwm\_scaling()}{set\_pwm\_scaling()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+pwm\+\_\+scaling (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{pwm\+\_\+scale\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_a6e71895792955acca1ed81eca952d767}\label{classmotorDriver_a6e71895792955acca1ed81eca952d767}} 
+\index{motorDriver@{motorDriver}!set\_setpoint\_a@{set\_setpoint\_a}}
+\index{set\_setpoint\_a@{set\_setpoint\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_setpoint\_a()}{set\_setpoint\_a()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+setpoint\+\_\+a (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{setpoint\+\_\+l\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_a574c77f9c8b357f0fba8f1d477660c8c}\label{classmotorDriver_a574c77f9c8b357f0fba8f1d477660c8c}} 
+\index{motorDriver@{motorDriver}!set\_setpoint\_l@{set\_setpoint\_l}}
+\index{set\_setpoint\_l@{set\_setpoint\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{set\_setpoint\_l()}{set\_setpoint\_l()}}
+{\footnotesize\ttfamily void motor\+Driver\+::set\+\_\+setpoint\+\_\+l (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{setpoint\+\_\+l\+\_\+in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmotorDriver_ae5ac04723b2ceac14fe4c12f9f163cd0}\label{classmotorDriver_ae5ac04723b2ceac14fe4c12f9f163cd0}} 
+\index{motorDriver@{motorDriver}!zero\_esum\_a@{zero\_esum\_a}}
+\index{zero\_esum\_a@{zero\_esum\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{zero\_esum\_a()}{zero\_esum\_a()}}
+{\footnotesize\ttfamily void motor\+Driver\+::zero\+\_\+esum\+\_\+a (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resets the angular integral error sum to zero. 
+
+This method resets the angular integral error sum, the protected esum\+\_\+a, to zero. 
+\begin{DoxyParams}{Parameters}
+{\em esum\+\_\+a} & The sum of the linear error terms for angular gain. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmotorDriver_a32a97045e477c63f1f67d5e398b7e8fd}\label{classmotorDriver_a32a97045e477c63f1f67d5e398b7e8fd}} 
+\index{motorDriver@{motorDriver}!zero\_esum\_l@{zero\_esum\_l}}
+\index{zero\_esum\_l@{zero\_esum\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{zero\_esum\_l()}{zero\_esum\_l()}}
+{\footnotesize\ttfamily void motor\+Driver\+::zero\+\_\+esum\+\_\+l (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resets the linear integral error sum to zero. 
+
+This method resets the integral linear error sum, the protected esum\+\_\+l, to zero. 
+\begin{DoxyParams}{Parameters}
+{\em esum\+\_\+l} & The sum of the linear error terms for integral gain in encoder counts. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmotorDriver_adac3e08603f6946acf32d764eddc0105}\label{classmotorDriver_adac3e08603f6946acf32d764eddc0105}} 
+\index{motorDriver@{motorDriver}!angle@{angle}}
+\index{angle@{angle}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::angle\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a3392381240d368f578b6f801984ac074}\label{classmotorDriver_a3392381240d368f578b6f801984ac074}} 
+\index{motorDriver@{motorDriver}!eder\_a@{eder\_a}}
+\index{eder\_a@{eder\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{eder\_a}{eder\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::eder\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a5685e659a36278ead61528aaa5ae7df4}\label{classmotorDriver_a5685e659a36278ead61528aaa5ae7df4}} 
+\index{motorDriver@{motorDriver}!eder\_l@{eder\_l}}
+\index{eder\_l@{eder\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{eder\_l}{eder\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::eder\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a5e3b5660f0764a6751b533893feb6b7b}\label{classmotorDriver_a5e3b5660f0764a6751b533893feb6b7b}} 
+\index{motorDriver@{motorDriver}!error\_a@{error\_a}}
+\index{error\_a@{error\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{error\_a}{error\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::error\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a1167aa02f79f3ce85a38138b51e11c02}\label{classmotorDriver_a1167aa02f79f3ce85a38138b51e11c02}} 
+\index{motorDriver@{motorDriver}!error\_l@{error\_l}}
+\index{error\_l@{error\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{error\_l}{error\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::error\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a8d327e1eed5b8eedf1b2289a675890f3}\label{classmotorDriver_a8d327e1eed5b8eedf1b2289a675890f3}} 
+\index{motorDriver@{motorDriver}!esum\_a@{esum\_a}}
+\index{esum\_a@{esum\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{esum\_a}{esum\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::esum\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a149914d07b894ca8201e6e9954862072}\label{classmotorDriver_a149914d07b894ca8201e6e9954862072}} 
+\index{motorDriver@{motorDriver}!esum\_a\_lim@{esum\_a\_lim}}
+\index{esum\_a\_lim@{esum\_a\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{esum\_a\_lim}{esum\_a\_lim}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::esum\+\_\+a\+\_\+lim\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_aaa3f3b3f21f2b4be049289a28ee49c44}\label{classmotorDriver_aaa3f3b3f21f2b4be049289a28ee49c44}} 
+\index{motorDriver@{motorDriver}!esum\_l@{esum\_l}}
+\index{esum\_l@{esum\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{esum\_l}{esum\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::esum\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a43969a01dd52d129d84243585dc996a9}\label{classmotorDriver_a43969a01dd52d129d84243585dc996a9}} 
+\index{motorDriver@{motorDriver}!esum\_l\_lim@{esum\_l\_lim}}
+\index{esum\_l\_lim@{esum\_l\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{esum\_l\_lim}{esum\_l\_lim}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::esum\+\_\+l\+\_\+lim\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_aab85058af216f925e9bffc78ed89bc0a}\label{classmotorDriver_aab85058af216f925e9bffc78ed89bc0a}} 
+\index{motorDriver@{motorDriver}!kd\_a@{kd\_a}}
+\index{kd\_a@{kd\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{kd\_a}{kd\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::kd\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a4c7c759295dc91ddfbd95d7f68251613}\label{classmotorDriver_a4c7c759295dc91ddfbd95d7f68251613}} 
+\index{motorDriver@{motorDriver}!kd\_l@{kd\_l}}
+\index{kd\_l@{kd\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{kd\_l}{kd\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::kd\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_acac05ca0ce9a687efb3d7469cc378e46}\label{classmotorDriver_acac05ca0ce9a687efb3d7469cc378e46}} 
+\index{motorDriver@{motorDriver}!ki\_a@{ki\_a}}
+\index{ki\_a@{ki\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{ki\_a}{ki\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::ki\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a6f35f045ff1b9ad15a7e25fb06423143}\label{classmotorDriver_a6f35f045ff1b9ad15a7e25fb06423143}} 
+\index{motorDriver@{motorDriver}!ki\_l@{ki\_l}}
+\index{ki\_l@{ki\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{ki\_l}{ki\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::ki\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a6c6003ba49477ac2fa07a997af31db3a}\label{classmotorDriver_a6c6003ba49477ac2fa07a997af31db3a}} 
+\index{motorDriver@{motorDriver}!kp\_a@{kp\_a}}
+\index{kp\_a@{kp\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{kp\_a}{kp\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::kp\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a4e1437c476209d17f804e7ebe6a82414}\label{classmotorDriver_a4e1437c476209d17f804e7ebe6a82414}} 
+\index{motorDriver@{motorDriver}!kp\_l@{kp\_l}}
+\index{kp\_l@{kp\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{kp\_l}{kp\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::kp\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_ae38f3809514145607d1d79e7513517e5}\label{classmotorDriver_ae38f3809514145607d1d79e7513517e5}} 
+\index{motorDriver@{motorDriver}!motor\_dir@{motor\_dir}}
+\index{motor\_dir@{motor\_dir}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{motor\_dir}{motor\_dir}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::motor\+\_\+dir\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a8f014e8a6c08db461ea445b5c827c247}\label{classmotorDriver_a8f014e8a6c08db461ea445b5c827c247}} 
+\index{motorDriver@{motorDriver}!motor\_ID@{motor\_ID}}
+\index{motor\_ID@{motor\_ID}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{motor\_ID}{motor\_ID}}
+{\footnotesize\ttfamily char motor\+Driver\+::motor\+\_\+\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_abbec1c2a55941af5ed8837c12ed73529}\label{classmotorDriver_abbec1c2a55941af5ed8837c12ed73529}} 
+\index{motorDriver@{motorDriver}!position@{position}}
+\index{position@{position}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a9522f9112a5281698efee54ec4d23a8d}\label{classmotorDriver_a9522f9112a5281698efee54ec4d23a8d}} 
+\index{motorDriver@{motorDriver}!pwm\_1@{pwm\_1}}
+\index{pwm\_1@{pwm\_1}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{pwm\_1}{pwm\_1}}
+{\footnotesize\ttfamily struct pwm\+\_\+config motor\+Driver\+::pwm\+\_\+1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a7b86ba5d54e991cbc79cf936f5c225f2}\label{classmotorDriver_a7b86ba5d54e991cbc79cf936f5c225f2}} 
+\index{motorDriver@{motorDriver}!pwm\_2@{pwm\_2}}
+\index{pwm\_2@{pwm\_2}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{pwm\_2}{pwm\_2}}
+{\footnotesize\ttfamily struct pwm\+\_\+config motor\+Driver\+::pwm\+\_\+2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a54e6e6cddb7e7ef584cbe58449e08650}\label{classmotorDriver_a54e6e6cddb7e7ef584cbe58449e08650}} 
+\index{motorDriver@{motorDriver}!pwm\_lim@{pwm\_lim}}
+\index{pwm\_lim@{pwm\_lim}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{pwm\_lim}{pwm\_lim}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::pwm\+\_\+lim\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a842b7fc2c8401ae9a2919982c746da6d}\label{classmotorDriver_a842b7fc2c8401ae9a2919982c746da6d}} 
+\index{motorDriver@{motorDriver}!pwm\_lim\_linear@{pwm\_lim\_linear}}
+\index{pwm\_lim\_linear@{pwm\_lim\_linear}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{pwm\_lim\_linear}{pwm\_lim\_linear}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::pwm\+\_\+lim\+\_\+linear\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_ab25c45eb1c877d431f375f9584f7842d}\label{classmotorDriver_ab25c45eb1c877d431f375f9584f7842d}} 
+\index{motorDriver@{motorDriver}!pwm\_scale@{pwm\_scale}}
+\index{pwm\_scale@{pwm\_scale}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{pwm\_scale}{pwm\_scale}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::pwm\+\_\+scale\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_a30b31378644a7e2ae943f953165adcf7}\label{classmotorDriver_a30b31378644a7e2ae943f953165adcf7}} 
+\index{motorDriver@{motorDriver}!ser\_out@{ser\_out}}
+\index{ser\_out@{ser\_out}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{ser\_out}{ser\_out}}
+{\footnotesize\ttfamily emstream$\ast$ motor\+Driver\+::ser\+\_\+out\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_adecf277f71f6f214bc6b920d113a05ee}\label{classmotorDriver_adecf277f71f6f214bc6b920d113a05ee}} 
+\index{motorDriver@{motorDriver}!setpoint\_a@{setpoint\_a}}
+\index{setpoint\_a@{setpoint\_a}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{setpoint\_a}{setpoint\_a}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::setpoint\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmotorDriver_ab6f8668c8137d2a8a4eb51e747466465}\label{classmotorDriver_ab6f8668c8137d2a8a4eb51e747466465}} 
+\index{motorDriver@{motorDriver}!setpoint\_l@{setpoint\_l}}
+\index{setpoint\_l@{setpoint\_l}!motorDriver@{motorDriver}}
+\subsubsection{\texorpdfstring{setpoint\_l}{setpoint\_l}}
+{\footnotesize\ttfamily int16\+\_\+t motor\+Driver\+::setpoint\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{motorDriver_8h}{motor\+Driver.\+h}}\item 
+\mbox{\hyperlink{motorDriver_8cpp}{motor\+Driver.\+cpp}}\end{DoxyCompactItemize}

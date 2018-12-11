@@ -1,0 +1,101 @@
+\hypertarget{classtask__motor}{}\section{task\+\_\+motor Class Reference}
+\label{classtask__motor}\index{task\_motor@{task\_motor}}
+
+
+A motor controller task class.  
+
+
+
+
+{\ttfamily \#include $<$task\+\_\+motor.\+h$>$}
+
+
+
+Inheritance diagram for task\+\_\+motor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classtask__motor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for task\+\_\+motor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classtask__motor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__motor_a6ed0a0b463e698d636b28bcdd518a027}{task\+\_\+motor}} (const char $\ast$, unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE, size\+\_\+t, emstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classtask__motor}{task\+\_\+motor}}. Utilizes base task frt\+\_\+task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__motor_a895a075ec470c9d5a07b8959de06aacd}{run}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmotorDriver}{motor\+Driver}} \mbox{\hyperlink{classtask__motor_afd5f8a54a30721c373339114f52d765a}{motor1}} (char)
+\item 
+\mbox{\hyperlink{classmotorDriver}{motor\+Driver}} \mbox{\hyperlink{classtask__motor_a91c4ef4950c8a17763c56fe1be988e03}{motor2}} (char)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A motor controller task class. 
+
+This task runs two motors in closed-\/loop control. It initializes the motor driver objects with proportional and integral gains then continually updates the pwm output of each motor by updating the motors\textquotesingle{} positiosn and setpoints, given to this task by other tasks in the system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__motor_a6ed0a0b463e698d636b28bcdd518a027}\label{classtask__motor_a6ed0a0b463e698d636b28bcdd518a027}} 
+\index{task\_motor@{task\_motor}!task\_motor@{task\_motor}}
+\index{task\_motor@{task\_motor}!task\_motor@{task\_motor}}
+\subsubsection{\texorpdfstring{task\_motor()}{task\_motor()}}
+{\footnotesize\ttfamily task\+\_\+motor\+::task\+\_\+motor (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+\_\+name,  }\item[{unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE}]{a\+\_\+priority,  }\item[{size\+\_\+t}]{a\+\_\+stack\+\_\+size,  }\item[{emstream $\ast$}]{p\+\_\+ser\+\_\+dev }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classtask__motor}{task\+\_\+motor}}. Utilizes base task frt\+\_\+task. 
+
+This constructor creates a new motor task. Its main job is to call the parent class\textquotesingle{}s constructor which does most of the work. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+name} & A character string which will be the name of this task \\
+\hline
+{\em a\+\_\+priority} & The priority at which this task will initially run (default\+: 0) \\
+\hline
+{\em a\+\_\+stack\+\_\+size} & The size of this task\textquotesingle{}s stack in bytes (default\+: config\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE) \\
+\hline
+{\em p\+\_\+ser\+\_\+dev} & Pointer to a serial device (port, radio, SD card, etc.) which can be used by this task to communicate (default\+: N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__motor_afd5f8a54a30721c373339114f52d765a}\label{classtask__motor_afd5f8a54a30721c373339114f52d765a}} 
+\index{task\_motor@{task\_motor}!motor1@{motor1}}
+\index{motor1@{motor1}!task\_motor@{task\_motor}}
+\subsubsection{\texorpdfstring{motor1()}{motor1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmotorDriver}{motor\+Driver}} task\+\_\+motor\+::motor1 (\begin{DoxyParamCaption}\item[{char}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtask__motor_a91c4ef4950c8a17763c56fe1be988e03}\label{classtask__motor_a91c4ef4950c8a17763c56fe1be988e03}} 
+\index{task\_motor@{task\_motor}!motor2@{motor2}}
+\index{motor2@{motor2}!task\_motor@{task\_motor}}
+\subsubsection{\texorpdfstring{motor2()}{motor2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmotorDriver}{motor\+Driver}} task\+\_\+motor\+::motor2 (\begin{DoxyParamCaption}\item[{char}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtask__motor_a895a075ec470c9d5a07b8959de06aacd}\label{classtask__motor_a895a075ec470c9d5a07b8959de06aacd}} 
+\index{task\_motor@{task\_motor}!run@{run}}
+\index{run@{run}!task\_motor@{task\_motor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void task\+\_\+motor\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method is called by the R\+T\+OS once to run the task loop for ever and ever. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{task__motor_8h}{task\+\_\+motor.\+h}}\item 
+\mbox{\hyperlink{task__motor_8cpp}{task\+\_\+motor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{task__motor_8cpp}{}\section{task\+\_\+motor.\+cpp File Reference}
+\label{task__motor_8cpp}\index{task\_motor.cpp@{task\_motor.cpp}}
+{\ttfamily \#include \char`\"{}task\+\_\+motor.\+h\char`\"{}}\newline
+Include dependency graph for task\+\_\+motor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{task__motor_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_a25f8e1a5785a07563b18d79e6f9bd324}{pwm\+\_\+tot\+\_\+1}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_af2af3d8edfab9e8de1d23250decf8f94}{pwm\+\_\+tot\+\_\+2}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_ab6da6a4e141486c2d537caedeb03b83d}{esum\+\_\+l\+\_\+1}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_a753a5b0ffc6d17146f6be7de8197d4ca}{esum\+\_\+l\+\_\+2}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_afa50b4dc416fe2f877d4a2d956d139cd}{esum\+\_\+a\+\_\+1}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_adddbfd8198b910a49fb3dcff0d894adb}{esum\+\_\+a\+\_\+2}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_a2a2851b9ca4d3821651e3995afe1c96f}{pwm\+\_\+lin\+\_\+1}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_acb991c5d8ad6aca9d01139b8b1e94263}{pwm\+\_\+lin\+\_\+2}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_ab9520875da819b4287415bca9ea91b41}{pwm\+\_\+ang\+\_\+1}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_a34cc0b640b080725e11880b53335e732}{pwm\+\_\+ang\+\_\+2}} = 0
+\begin{DoxyCompactList}\small\item\em These shares are for diagnostic purposes only. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_a3db590989536daa88fc3c5a37ccb47e8}{Linear\+Distance}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{task__motor_8cpp_ad54bbcac01927fc8bb5a6c50f5f8bcc9}{setpoint\+\_\+a\+\_\+1}} = 0
+\begin{DoxyCompactList}\small\item\em This share contains the current angular setpoint of motor 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains source code for a motor controller task.
+
+Revisions\+: \begin{DoxyItemize}
+\item 12-\/4-\/18 RT Original file\end{DoxyItemize}
+License\+: This file is copyright 2018 by Ricky Tan and released under the Lesser G\+NU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{task__motor_8cpp_afa50b4dc416fe2f877d4a2d956d139cd}\label{task__motor_8cpp_afa50b4dc416fe2f877d4a2d956d139cd}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!esum\_a\_1@{esum\_a\_1}}
+\index{esum\_a\_1@{esum\_a\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{esum\_a\_1}{esum\_a\_1}}
+{\footnotesize\ttfamily int16\+\_\+t esum\+\_\+a\+\_\+1 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_adddbfd8198b910a49fb3dcff0d894adb}\label{task__motor_8cpp_adddbfd8198b910a49fb3dcff0d894adb}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!esum\_a\_2@{esum\_a\_2}}
+\index{esum\_a\_2@{esum\_a\_2}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{esum\_a\_2}{esum\_a\_2}}
+{\footnotesize\ttfamily int16\+\_\+t esum\+\_\+a\+\_\+2 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_ab6da6a4e141486c2d537caedeb03b83d}\label{task__motor_8cpp_ab6da6a4e141486c2d537caedeb03b83d}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!esum\_l\_1@{esum\_l\_1}}
+\index{esum\_l\_1@{esum\_l\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{esum\_l\_1}{esum\_l\_1}}
+{\footnotesize\ttfamily int16\+\_\+t esum\+\_\+l\+\_\+1 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_a753a5b0ffc6d17146f6be7de8197d4ca}\label{task__motor_8cpp_a753a5b0ffc6d17146f6be7de8197d4ca}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!esum\_l\_2@{esum\_l\_2}}
+\index{esum\_l\_2@{esum\_l\_2}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{esum\_l\_2}{esum\_l\_2}}
+{\footnotesize\ttfamily int16\+\_\+t esum\+\_\+l\+\_\+2 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_a3db590989536daa88fc3c5a37ccb47e8}\label{task__motor_8cpp_a3db590989536daa88fc3c5a37ccb47e8}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!LinearDistance@{LinearDistance}}
+\index{LinearDistance@{LinearDistance}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{LinearDistance}{LinearDistance}}
+{\footnotesize\ttfamily int16\+\_\+t Linear\+Distance}
+
+\mbox{\Hypertarget{task__motor_8cpp_ab9520875da819b4287415bca9ea91b41}\label{task__motor_8cpp_ab9520875da819b4287415bca9ea91b41}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_ang\_1@{pwm\_ang\_1}}
+\index{pwm\_ang\_1@{pwm\_ang\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_ang\_1}{pwm\_ang\_1}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+ang\+\_\+1 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_a34cc0b640b080725e11880b53335e732}\label{task__motor_8cpp_a34cc0b640b080725e11880b53335e732}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_ang\_2@{pwm\_ang\_2}}
+\index{pwm\_ang\_2@{pwm\_ang\_2}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_ang\_2}{pwm\_ang\_2}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+ang\+\_\+2 = 0}
+
+
+
+These shares are for diagnostic purposes only. 
+
+\mbox{\Hypertarget{task__motor_8cpp_a2a2851b9ca4d3821651e3995afe1c96f}\label{task__motor_8cpp_a2a2851b9ca4d3821651e3995afe1c96f}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_lin\_1@{pwm\_lin\_1}}
+\index{pwm\_lin\_1@{pwm\_lin\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_lin\_1}{pwm\_lin\_1}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+lin\+\_\+1 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_acb991c5d8ad6aca9d01139b8b1e94263}\label{task__motor_8cpp_acb991c5d8ad6aca9d01139b8b1e94263}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_lin\_2@{pwm\_lin\_2}}
+\index{pwm\_lin\_2@{pwm\_lin\_2}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_lin\_2}{pwm\_lin\_2}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+lin\+\_\+2 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_a25f8e1a5785a07563b18d79e6f9bd324}\label{task__motor_8cpp_a25f8e1a5785a07563b18d79e6f9bd324}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_tot\_1@{pwm\_tot\_1}}
+\index{pwm\_tot\_1@{pwm\_tot\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_tot\_1}{pwm\_tot\_1}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+tot\+\_\+1 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_af2af3d8edfab9e8de1d23250decf8f94}\label{task__motor_8cpp_af2af3d8edfab9e8de1d23250decf8f94}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!pwm\_tot\_2@{pwm\_tot\_2}}
+\index{pwm\_tot\_2@{pwm\_tot\_2}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{pwm\_tot\_2}{pwm\_tot\_2}}
+{\footnotesize\ttfamily int16\+\_\+t pwm\+\_\+tot\+\_\+2 = 0}
+
+\mbox{\Hypertarget{task__motor_8cpp_ad54bbcac01927fc8bb5a6c50f5f8bcc9}\label{task__motor_8cpp_ad54bbcac01927fc8bb5a6c50f5f8bcc9}} 
+\index{task\_motor.cpp@{task\_motor.cpp}!setpoint\_a\_1@{setpoint\_a\_1}}
+\index{setpoint\_a\_1@{setpoint\_a\_1}!task\_motor.cpp@{task\_motor.cpp}}
+\subsubsection{\texorpdfstring{setpoint\_a\_1}{setpoint\_a\_1}}
+{\footnotesize\ttfamily int16\+\_\+t setpoint\+\_\+a\+\_\+1 = 0}
+
+
+
+This share contains the current angular setpoint of motor 1. 
+

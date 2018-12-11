@@ -1,0 +1,134 @@
+\hypertarget{classtask__LED}{}\section{task\+\_\+\+L\+ED Class Reference}
+\label{classtask__LED}\index{task\_LED@{task\_LED}}
+
+
+{\ttfamily \#include $<$task\+\_\+\+L\+E\+D.\+h$>$}
+
+
+
+Inheritance diagram for task\+\_\+\+L\+ED\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classtask__LED__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for task\+\_\+\+L\+ED\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classtask__LED__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__LED_a5479d56922008471ea3a0c52ce0b6d77}{task\+\_\+\+L\+ED}} (const char $\ast$, unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE, size\+\_\+t, emstream $\ast$)
+\item 
+void \mbox{\hyperlink{classtask__LED_a913e9bbfc8ee771f558285f4ab2dc56c}{run}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361a}{L\+E\+D\+\_\+states}} \{ \newline
+\mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361aa9936f05f0ed5abff2fa0cfeeb49a21da}{I\+N\+IT}}, 
+\mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361aa967711b1ba963e8e221d32e5262b8d0f}{L\+E\+D\+\_\+\+S\+ET}}, 
+\mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361aae83fda859a9006b1d580a056fd4fd486}{L\+E\+D\+\_\+\+ON}}, 
+\mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361aaa2f5abad9f27e8be44fed81fd26461f0}{L\+E\+D\+\_\+\+C\+LR}}, 
+\newline
+\mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361aa3319c02a8fd253d81da3dabb50974b88}{L\+E\+D\+\_\+\+O\+FF}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classtask__LED_ad70fcfd73a9a1bd053c1126fa61b24a7}{ctr}}
+\begin{DoxyCompactList}\small\item\em Loop counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This task interacts with the user for force him/her to do what he/she is told. What a rude task this is. Then again, computers tend to be that way; if they\textquotesingle{}re polite with you, they\textquotesingle{}re probably spying on you. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361a}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361a}} 
+\index{task\_LED@{task\_LED}!LED\_states@{LED\_states}}
+\index{LED\_states@{LED\_states}!task\_LED@{task\_LED}}
+\subsubsection{\texorpdfstring{LED\_states}{LED\_states}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtask__LED_aa02cb6b5b3999e54620eade54639361a}{task\+\_\+\+L\+E\+D\+::\+L\+E\+D\+\_\+states}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!task\_LED@{task\_LED}}\index{task\_LED@{task\_LED}!INIT@{INIT}}}\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361aa9936f05f0ed5abff2fa0cfeeb49a21da}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361aa9936f05f0ed5abff2fa0cfeeb49a21da}} 
+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_SET@{LED\_SET}!task\_LED@{task\_LED}}\index{task\_LED@{task\_LED}!LED\_SET@{LED\_SET}}}\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361aa967711b1ba963e8e221d32e5262b8d0f}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361aa967711b1ba963e8e221d32e5262b8d0f}} 
+L\+E\+D\+\_\+\+S\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_ON@{LED\_ON}!task\_LED@{task\_LED}}\index{task\_LED@{task\_LED}!LED\_ON@{LED\_ON}}}\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361aae83fda859a9006b1d580a056fd4fd486}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361aae83fda859a9006b1d580a056fd4fd486}} 
+L\+E\+D\+\_\+\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_CLR@{LED\_CLR}!task\_LED@{task\_LED}}\index{task\_LED@{task\_LED}!LED\_CLR@{LED\_CLR}}}\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361aaa2f5abad9f27e8be44fed81fd26461f0}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361aaa2f5abad9f27e8be44fed81fd26461f0}} 
+L\+E\+D\+\_\+\+C\+LR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_OFF@{LED\_OFF}!task\_LED@{task\_LED}}\index{task\_LED@{task\_LED}!LED\_OFF@{LED\_OFF}}}\mbox{\Hypertarget{classtask__LED_aa02cb6b5b3999e54620eade54639361aa3319c02a8fd253d81da3dabb50974b88}\label{classtask__LED_aa02cb6b5b3999e54620eade54639361aa3319c02a8fd253d81da3dabb50974b88}} 
+L\+E\+D\+\_\+\+O\+FF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__LED_a5479d56922008471ea3a0c52ce0b6d77}\label{classtask__LED_a5479d56922008471ea3a0c52ce0b6d77}} 
+\index{task\_LED@{task\_LED}!task\_LED@{task\_LED}}
+\index{task\_LED@{task\_LED}!task\_LED@{task\_LED}}
+\subsubsection{\texorpdfstring{task\_LED()}{task\_LED()}}
+{\footnotesize\ttfamily task\+\_\+\+L\+E\+D\+::task\+\_\+\+L\+ED (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+\_\+name,  }\item[{unsigned port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE}]{a\+\_\+priority,  }\item[{size\+\_\+t}]{a\+\_\+stack\+\_\+size,  }\item[{emstream $\ast$}]{p\+\_\+ser\+\_\+dev }\end{DoxyParamCaption})}
+
+This constructor creates a new data acquisition task. Its main job is to call the parent class\textquotesingle{}s constructor which does most of the work. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+name} & A character string which will be the name of this task \\
+\hline
+{\em a\+\_\+priority} & The priority at which this task will initially run (default\+: 0) \\
+\hline
+{\em a\+\_\+stack\+\_\+size} & The size of this task\textquotesingle{}s stack in bytes (default\+: config\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE) \\
+\hline
+{\em p\+\_\+ser\+\_\+dev} & Pointer to a serial device (port, radio, SD card, etc.) which can be used by this task to communicate (default\+: N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__LED_a913e9bbfc8ee771f558285f4ab2dc56c}\label{classtask__LED_a913e9bbfc8ee771f558285f4ab2dc56c}} 
+\index{task\_LED@{task\_LED}!run@{run}}
+\index{run@{run}!task\_LED@{task\_LED}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void task\+\_\+\+L\+E\+D\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method is called by the R\+T\+OS once to run the task loop for ever and ever.
+
+This task blinks an L\+ED attached to P\+O\+R\+TR Pin 1 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtask__LED_ad70fcfd73a9a1bd053c1126fa61b24a7}\label{classtask__LED_ad70fcfd73a9a1bd053c1126fa61b24a7}} 
+\index{task\_LED@{task\_LED}!ctr@{ctr}}
+\index{ctr@{ctr}!task\_LED@{task\_LED}}
+\subsubsection{\texorpdfstring{ctr}{ctr}}
+{\footnotesize\ttfamily uint8\+\_\+t task\+\_\+\+L\+E\+D\+::ctr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Loop counter. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{task__LED_8h}{task\+\_\+\+L\+E\+D.\+h}}\item 
+\mbox{\hyperlink{task__LED_8cpp}{task\+\_\+\+L\+E\+D.\+cpp}}\end{DoxyCompactItemize}
