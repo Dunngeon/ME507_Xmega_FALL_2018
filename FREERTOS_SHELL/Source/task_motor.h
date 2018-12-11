@@ -6,7 +6,7 @@
  *    RT 12/4/18 - Original file
  *
  *  License:
- *    This file is copyright 2012 by Ricky Tan and released under the Lesser GNU 
+ *    This file is copyright 2018 by Ricky Tan and released under the Lesser GNU 
  *    Public License, version 2. It intended for educational use only, but its use
  *    is not limited thereto. */
 /*    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 

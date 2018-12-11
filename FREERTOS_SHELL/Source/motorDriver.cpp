@@ -83,11 +83,11 @@ motorDriver::motorDriver(char motor, emstream* ser_dev)
  *  @details This method sets the linear PID gains for the object, kp_l, ki_l, kd_l.
  *			 the protected class variables, kp, ki, kd, and ka.
  *  @param   kp_l_in The input linear proportional gain.
- *  @var     kp_l The class variable for the linear proportional gain.
+ *  @var     int16_t kp_l The class variable for the linear proportional gain.
  *  @param   ki_l_in The input linear integral gain.
- *  @var     ki_l The class variable for the linear integral gain.
+ *  @var     int16_t ki_l The class variable for the linear integral gain.
  *  @param   kd_l_in The input linear proportional gain.
- *  @var     kd_l The class variable for the linear proportional gain.
+ *  @var     int16_t kd_l The class variable for the linear proportional gain.
  */
 
 void motorDriver::set_k_l(int16_t kp_l_in, int16_t ki_l_in, int16_t kd_l_in)
@@ -104,11 +104,11 @@ void motorDriver::set_k_l(int16_t kp_l_in, int16_t ki_l_in, int16_t kd_l_in)
 /** @brief   Sets the angular PID gains and the angular gain
  *  @details This method sets the linear PID gains for the object, kp_l, ki_l, kd_l.
  *  @param   kp_a_in The input angular proportional gain.
- *  @var     kp_a The class variable for the angular proportional gain.
+ *  @var     int16_t kp_a The class variable for the angular proportional gain.
  *  @param   ki_a_in The input angular integral gain.
- *  @var     ki_a The class variable for the angular integral gain.
+ *  @var     int16_t ki_a The class variable for the angular integral gain.
  *  @param   kd_a_in The input angular proportional gain.
- *  @var     kd_a The class variable for the angular proportional gain.
+ *  @var     int16_t kd_a The class variable for the angular proportional gain.
  */
 
 void motorDriver::set_k_a(int16_t kp_a_in, int16_t ki_a_in, int16_t kd_a_in)
@@ -126,7 +126,7 @@ void motorDriver::set_k_a(int16_t kp_a_in, int16_t ki_a_in, int16_t kd_a_in)
  *  @details This method sets the pwm scaling for each of the gains. This factor divides
  *			 the pwm signal to increase resolution.
  *  @param   pwm_scale_in The input pwm scaling.
- *  @var     pwm_scale The class variable for pwm scaling.
+ *  @var     int16_t pwm_scale The class variable for pwm scaling.
  */
 
 void motorDriver::set_pwm_scaling(int16_t pwm_scale_in)
@@ -141,7 +141,7 @@ void motorDriver::set_pwm_scaling(int16_t pwm_scale_in)
  *  @details This method sets the pwm output limit of the object, the protected
  *		     variable pwm_lim, in pwm output. Make sure a positive number is entered.
  *  @param   pwm_lim_in The input pwm limit.
- *  @var     pwm_lim The class variable for the pwm limit.
+ *  @var     int16_t pwm_lim The class variable for the pwm limit.
  */
 
 void motorDriver::set_pwm_lim(int16_t pwm_lim_in)
@@ -164,7 +164,7 @@ void motorDriver::set_pwm_lim(int16_t pwm_lim_in)
  *			 between pwm_lim and pwm_lim_linear is the space with which the angular PID
  *			 operates. Input is limited to pwm_lim, so make sure to set pwm_lim first.
  *  @param   pwm_lim_linear_in The input pwm limit.
- *  @var     pwm_lim_linear The class variable for the pwm limit.
+ *  @var     int16_t pwm_lim_linear The class variable for the pwm limit.
  */
 
 void motorDriver::set_pwm_lim_linear(int16_t pwm_lim_linear_in)
@@ -187,7 +187,7 @@ void motorDriver::set_pwm_lim_linear(int16_t pwm_lim_linear_in)
  *  @details This method sets the integral error sum limit of the object, the protected
  *		     variable esum_l_lim, in encoder counts.
  *  @param   esum_l_lim_in The input integral error sum limit.
- *  @var     esum_l_lim The class variable for the integral error sum limit.
+ *  @var     int16_t esum_l_lim The class variable for the integral error sum limit.
  */
 
 void motorDriver::set_esum_l_lim(int16_t esum_l_lim_in)
@@ -202,7 +202,7 @@ void motorDriver::set_esum_l_lim(int16_t esum_l_lim_in)
  *  @details This method sets the integral error sum limit of the object, the protected
  *		     variable esum_a_lim, in encoder counts.
  *  @param   esum_a_lim_in The input integral error sum limit.
- *  @var     esum_a_lim The class variable for the integral error sum limit.
+ *  @var     int16_t esum_a_lim The class variable for the integral error sum limit.
  */
 
 void motorDriver::set_esum_a_lim(int16_t esum_a_lim_in)
@@ -217,7 +217,7 @@ void motorDriver::set_esum_a_lim(int16_t esum_a_lim_in)
  *  @details This method sets the target linear setpoint of the object, the protected
  *		     variable setpoint_l, in encoder counts.
  *  @param   setpoint_l_in The input linear setpoint.
- *  @var     setpoint_l The class variable for the linear setpoint.
+ *  @var     int16_t setpoint_l The class variable for the linear setpoint.
  */
 
 void motorDriver::set_setpoint_l(int16_t setpoint_l_in)
@@ -232,7 +232,7 @@ void motorDriver::set_setpoint_l(int16_t setpoint_l_in)
  *  @details This method sets the target angular setpoint of the object, the protected
  *		     variable setpoint_a, in encoder counts.
  *  @param   setpoint_a_in The input angular setpoint.
- *  @var     setpoint_a The class variable for the angular setpoint.
+ *  @var     int16_t setpoint_a The class variable for the angular setpoint.
  */
 
 void motorDriver::set_setpoint_a(int16_t setpoint_a_in)
@@ -247,7 +247,7 @@ void motorDriver::set_setpoint_a(int16_t setpoint_a_in)
  *  @details This method sets the current position of the object, the protected
  *		     variable position, in encoder counts.
  *  @param   position_in The input position.
- *  @var     position The class variable for the position.
+ *  @var     pint16_t osition The class variable for the position.
  */
 
 void motorDriver::set_position(int16_t position_in)
@@ -262,7 +262,7 @@ void motorDriver::set_position(int16_t position_in)
  *  @details This method sets the current angle of the object, the protected
  *		     variable angle.
  *  @param   angle_in The input angle.
- *  @var     angle The class variable for the angle.
+ *  @var     int16_t angle The class variable for the angle.
  */
 
 void motorDriver::set_angle(int16_t angle_in)
@@ -313,21 +313,21 @@ void motorDriver::zero_esum_a(void)
  *  @param   en_i Enable integral action input.
  *  @param   en_d Enable derivative action input.
  *	@param	 op_type Whether operation is drive-coast or drive-brake
- *	@var	 error_l Linear error term
- *	@var	 error_a Angular error term
- *	@var	 esum_l Linear cumulative error term
- *	@var	 esum_a Angular cumulative error term
- *	@var	 eder_l Linear error derivative term. Currently placeholder
- *	@var	 eder_a Angular error derivative term. Currently placeholder
- *	@var	 signal_l_p Proportional action term for linear action
- *	@var	 signal_l_i Integral action term for linear action
- *	@var	 signal_l_d Derivative action term for linear action
- *	@var	 signal_a_p Proportional action term for angular action
- *	@var	 signal_a_i Integral action term for angular action
- *	@var	 signal_a_d Derivative action term for angular action
- *	@var	 pwm_percent_linear Scaled PWM percentage due to linear control
- *	@var	 pwm_percent_angular Scaled PWM percentage due to angular control
- *	@var	 pwm_percent Total angular actuation. This is what is sent to the motor
+ *	@var	 int16_t error_l Linear error term
+ *	@var	 int16_t error_a Angular error term
+ *	@var	 int16_t esum_l Linear cumulative error term
+ *	@var	 int16_t esum_a Angular cumulative error term
+ *	@var	 int16_t eder_l Linear error derivative term. Currently placeholder
+ *	@var	 int16_t eder_a Angular error derivative term. Currently placeholder
+ *	@var	 int16_t signal_l_p Proportional action term for linear action
+ *	@var	 int16_t signal_l_i Integral action term for linear action
+ *	@var	 int16_t signal_l_d Derivative action term for linear action
+ *	@var	 int16_t signal_a_p Proportional action term for angular action
+ *	@var	 int16_t signal_a_i Integral action term for angular action
+ *	@var	 int16_t signal_a_d Derivative action term for angular action
+ *	@var	 int16_t pwm_percent_linear Scaled PWM percentage due to linear control
+ *	@var	 int16_t pwm_percent_angular Scaled PWM percentage due to angular control
+ *	@var	 int16_t pwm_percent Total angular actuation. This is what is sent to the motor
  *  @return  diag Struct of type diagnostic that holds motor's information to be passed to
  *				task_diag when unpacked by task_motor
  */
