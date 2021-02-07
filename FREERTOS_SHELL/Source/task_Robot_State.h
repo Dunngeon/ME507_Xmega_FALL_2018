@@ -86,6 +86,9 @@ protected:
 	int16_t R_I_POS_Y_delta;
 	int16_t R_I_POS_X;
 	int16_t R_I_POS_Y;
+	int16_t Robot_Pos_X_INERT;			// Contains current position of robot in X_INERTIAL
+	int16_t Robot_Pos_Y_INERT;			// Contains current position of robot in Y_INERTIAL
+	int16_t Robot_Angle_Theta_INERT;	// Contains current angle of the robot in THETA_INERTIAL
 public:
 	// This constructor creates a user interface task object
 	task_Robot_State (const char*, unsigned portBASE_TYPE, size_t, emstream*);

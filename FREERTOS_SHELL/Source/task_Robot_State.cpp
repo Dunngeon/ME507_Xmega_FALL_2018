@@ -87,6 +87,9 @@ void task_Robot_State::run (void)
 			R_THETA_Delta = 0; //zero out the angular position of the robot upon startup.
 			R_I_POS_X = 0;
 			R_I_POS_Y = 0;
+			Robot_Pos_X_INERT = 0;			
+			Robot_Pos_Y_INERT = 0;			
+			Robot_Angle_Theta_INERT = 0;	
 			transition_to(1);
 			break;
 			
